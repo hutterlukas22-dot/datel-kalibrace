@@ -301,3 +301,7 @@ section.ourServices.kal-services .container .uk-grid>div .text h2 span{display:i
 .kal-table{border-collapse:collapse;border-left:1px solid #E4E8EE;border-right:1px solid #E4E8EE}
 .kal-table thead th:first-child{border-left:1px solid #331F5E}
 .kal-table thead th:last-child{border-right:1px solid #331F5E}
+
+/* úvod „Čím kalibrujeme“: horní odsazení jako ostatní sekce stránky (web má u tohoto bloku jen 2rem) */
+section.ourServices.kal-services{padding-top:10rem}
+@media (max-width:959px){section.ourServices.kal-services{padding-top:6rem}}
