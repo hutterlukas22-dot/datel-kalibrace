@@ -280,3 +280,6 @@ section.formPack.kal-form .container:before{background:url(../img/pattern.svg) r
 
 /* pravítka ve formuláři přes celou výšku sekce */
 section.formPack.kal-form:before,section.formPack.kal-form:after{height:100%;background-repeat:repeat-y}
+
+/* úvod „Čím kalibrujeme“ (převzatý blok ourServices): nadpis v jednom řádku jako ostatní H2 */
+section.ourServices.kal-services .container .uk-grid>div .text h2 span{display:inline}
