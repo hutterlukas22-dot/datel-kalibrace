@@ -277,7 +277,8 @@ section.formPack.kal-form .container:before{background:url(../img/pattern.svg) r
      a postava za ní zajede v pase. Nohy jsou vidět jen na hodně vysokém monitoru. */
   /* výška bloku = výška okna pod hlavičkou (max. 80rem); postava se škáluje s ní, aby pas byl vždy
      u spodní hrany bloku. Na konci sekce blok dojede k modré lince a postava za ni zajede v pase. */
-  .kal-form .kal-sticky{position:sticky;top:12rem;z-index:1;height:min(calc(100vh - 21rem),80rem);box-sizing:border-box}
+  /* při scrollu je blok svisle uprostřed mezi přilepenou hlavičkou (8rem na všech šířkách) a spodní hranou okna */
+  .kal-form .kal-sticky{--kal-h:min(calc(100vh - 21rem),80rem);position:sticky;top:calc(8rem + (100vh - 8rem - var(--kal-h)) / 2);z-index:1;height:var(--kal-h);box-sizing:border-box}
   .kal-form .kal-sticky>.text{max-width:32rem}
   .kal-form .kal-person{position:absolute;top:0;right:0;width:min(calc((100vh - 21rem) * .62),48rem);margin:0;transform:none}
 }

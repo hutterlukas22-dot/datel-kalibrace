@@ -22,7 +22,7 @@ ${obsah}
 </main>
 ${footer}
 <script src="assets/js/datel-site.js"></script>
-<script src="assets/js/kalibrace.js"></script>
+<script src="assets/js/kalibrace.js?v=${v}"></script>
 </body>
 </html>
 `;
