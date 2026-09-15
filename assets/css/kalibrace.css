@@ -290,3 +290,14 @@ section.formPack.kal-form:before,section.formPack.kal-form:after{height:100%;bac
 
 /* úvod „Čím kalibrujeme“ (převzatý blok ourServices): nadpis v jednom řádku jako ostatní H2 */
 section.ourServices.kal-services .container .uk-grid>div .text h2 span{display:inline}
+
+/* tabulky rozsahu: jednotné linky mezi všemi sloupci (i vedle sloučených buněk), bez zděděného podbarvení */
+.kal-table th,.kal-table td{border:0;border-left:1px solid #E4E8EE;background:transparent}
+.kal-table thead th{background:#331F5E;border-left-color:rgba(253,253,253,.18)}
+.kal-table tbody td{border-top:1px solid #E4E8EE}
+.kal-table th:first-child,.kal-table tbody tr:first-child td:first-child{border-left:0}
+.kal-table tbody tr:last-child td,.kal-table tbody td[rowspan]{border-bottom:1px solid #E4E8EE}
+/* vnější svislé linky tabulky (vlevo a vpravo) */
+.kal-table{border-collapse:collapse;border-left:1px solid #E4E8EE;border-right:1px solid #E4E8EE}
+.kal-table thead th:first-child{border-left:1px solid #331F5E}
+.kal-table thead th:last-child{border-right:1px solid #331F5E}
