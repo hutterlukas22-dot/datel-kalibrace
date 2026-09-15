@@ -254,3 +254,7 @@ section.cooperation .container h2 span{display:inline}
 .kal-sector--static:hover{transform:none;box-shadow:0 3px 6px rgba(0,0,0,.12)}
 .kal-sector--static:hover .kal-sector__media img{transform:none}
 /* ---------- /karta odvětví ---------- */
+
+/* formulář: web roztahuje texturu přes celou sekci (cover) — u vyššího formuláře je obří.
+   Nahrazeno čistou dlaždicí patternu ve stejném měřítku jako ostatní fialové sekce. */
+section.formPack.kal-form .container:before{background:url(../img/pattern.svg) repeat 0 0/235.25px 262.5px;opacity:.5}
