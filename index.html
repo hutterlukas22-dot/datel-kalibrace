@@ -108,49 +108,43 @@
   <div class="container">
     <div class="kal-card">
       <p class="kal-eyebrow">Rozsah akreditace v kostce</p>
-      <!-- Osa: x = 8 + (hodnota − min) * (624 / (max − min)).
-           Teplota: zobrazeno −70 až +210 °C, akreditováno −40 až +180 °C.
-           Vlhkost: zobrazeno 0 až 100 % RH, akreditováno 10 až 95 % RH. Hodnoty z CMC (příloha osvědčení). -->
-      <svg class="kal-scale" viewBox="0 0 640 236" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rozsah akreditace. Teplota −40 až +180 °C: v kapalinové lázni FLUKE 7109A −25 až 140 °C s nejistotou 0,06 °C; v klimatické komoře Vötschtechnik −40 až 0 °C s 0,50 °C, 0 až 60 °C s 0,13 °C a 60 až 180 °C s 0,34 °C. Mimo tento rozsah teplotu nekalibrujeme. Relativní vlhkost 10 až 95 % RH při teplotách 10 až 40 °C v generátoru Rotronic HygroGen 2: 10 až 30 % RH s nejistotou 1,1, 30 až 80 % RH s 1,2 a 80 až 95 % RH s 1,8 % RH. Vlhkost 5 až 10 % RH kalibrujeme mimo rozsah akreditace, pod 5 a nad 95 % RH nekalibrujeme.">
-        <defs>
-          <pattern id="kal-hx" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FFFFFF"/><line x1="0" y1="0" x2="0" y2="6" stroke="#B4E2F6" stroke-width="2"/></pattern>
-          <pattern id="kal-nx" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F2F5F8"/></pattern>
-        </defs>
-        <g font-family="Satoshi, sans-serif">
-          <!-- TEPLOTA -->
-          <text x="8" y="12" font-size="10.5" font-weight="700" fill="#331F5E" letter-spacing=".6">TEPLOTA °C</text>
-          <text x="632" y="12" text-anchor="end" font-size="10.5" font-weight="700" fill="#008FCD">nejistota od 0,06 °C</text>
-          <rect x="8" y="20" width="67" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
-          <rect x="75" y="20" width="490" height="12" fill="#008FCD"/>
-          <rect x="565" y="20" width="67" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
-          <g stroke="#331F5E"><line x1="75" y1="32" x2="75" y2="40"/><line x1="108" y1="32" x2="108" y2="37"/><line x1="164" y1="32" x2="164" y2="37"/><line x1="298" y1="32" x2="298" y2="37"/><line x1="476" y1="32" x2="476" y2="37"/><line x1="565" y1="32" x2="565" y2="40"/></g>
-          <g font-size="10" font-weight="500" fill="#331F5E" text-anchor="middle"><text x="75" y="51">−40</text><text x="108" y="51">−25</text><text x="164" y="51">0</text><text x="298" y="51">60</text><text x="476" y="51">140</text><text x="565" y="51">+180</text></g>
-          <g font-size="8.5" fill="#9D9D9D"><text x="8" y="51">nekalibrujeme</text><text x="632" y="51" text-anchor="end">nekalibrujeme</text></g>
-          <text x="8" y="69" font-size="8.5" font-weight="700" fill="#707070" letter-spacing=".5">NEJNIŽŠÍ UDÁVANÁ ROZŠÍŘENÁ NEJISTOTA U (k = 2)</text>
-          <rect x="108" y="75" width="368" height="15" fill="#FFFFFF" stroke="#008FCD"/>
-          <text x="292" y="86" text-anchor="middle" font-size="9.5" font-weight="700" fill="#008FCD">0,06 °C</text>
-          <text x="292" y="101" text-anchor="middle" font-size="8.5" fill="#707070">kapalinová lázeň FLUKE 7109A</text>
-          <g fill="#FFFFFF" stroke="#46B9EB"><rect x="75" y="108" width="89" height="15"/><rect x="164" y="108" width="134" height="15"/><rect x="298" y="108" width="267" height="15"/></g>
-          <g font-size="9.5" font-weight="700" fill="#535353" text-anchor="middle"><text x="119" y="119">0,50 °C</text><text x="231" y="119">0,13 °C</text><text x="431" y="119">0,34 °C</text></g>
-          <text x="320" y="134" text-anchor="middle" font-size="8.5" fill="#707070">klimatická komora Vötschtechnik</text>
-          <!-- VLHKOST -->
-          <text x="8" y="164" font-size="10.5" font-weight="700" fill="#331F5E" letter-spacing=".6">RELATIVNÍ VLHKOST % RH</text>
-          <text x="632" y="164" text-anchor="end" font-size="10.5" font-weight="700" fill="#008FCD">nejistota od 1,1 % RH</text>
-          <rect x="8" y="172" width="31" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
-          <rect x="39" y="172" width="31" height="12" fill="url(#kal-hx)" stroke="#B4E2F6"/>
-          <rect x="70" y="172" width="531" height="12" fill="#008FCD"/>
-          <rect x="601" y="172" width="31" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
-          <g stroke="#331F5E"><line x1="39" y1="184" x2="39" y2="189"/><line x1="70" y1="184" x2="70" y2="192"/><line x1="195" y1="184" x2="195" y2="189"/><line x1="507" y1="184" x2="507" y2="189"/><line x1="601" y1="184" x2="601" y2="192"/></g>
-          <g font-size="10" font-weight="500" fill="#331F5E" text-anchor="middle"><text x="39" y="203">5</text><text x="72" y="203">10</text><text x="195" y="203">30</text><text x="507" y="203">80</text><text x="601" y="203">95</text></g>
-          <g fill="#FFFFFF" stroke="#008FCD"><rect x="70" y="210" width="125" height="15"/><rect x="195" y="210" width="312" height="15"/><rect x="507" y="210" width="94" height="15"/></g>
-          <g font-size="9.5" font-weight="700" fill="#008FCD" text-anchor="middle"><text x="133" y="221">1,1 % RH</text><text x="351" y="221">1,2 % RH</text><text x="554" y="221">1,8 % RH</text></g>
-          <text x="336" y="235" text-anchor="middle" font-size="8.5" fill="#707070">generátor vlhkosti Rotronic HygroGen 2 · akreditováno při teplotách (10 až 40) °C</text>
-        </g>
-      </svg>
+      <!-- Rozsah akreditace v kostce — responzivní osa (pozice v %: teplota zobrazena −70 až +210 °C, vlhkost 0 až 100 % RH).
+           Hodnoty z CMC (příloha osvědčení o akreditaci). -->
+      <div class="kal-axes">
+        <div class="kal-axis">
+          <div class="kal-axis__summary">
+            <p class="kal-axis__label">Teplota</p>
+            <p class="kal-axis__range">−40 až +180 <small>°C</small></p>
+            <p class="kal-axis__best">nejistota od <strong>0,06 °C</strong></p>
+          </div>
+          <div class="kal-axis__chart" role="img" aria-label="Teplota: akreditováno −40 až +180 °C. Kapalinová lázeň FLUKE 7109A −25 až 140 °C, nejistota 0,06 °C. Klimatická komora Vötschtechnik −40 až 0 °C 0,50 °C, 0 až 60 °C 0,13 °C, 60 až 180 °C 0,34 °C. Mimo tento rozsah nekalibrujeme.">
+            <div class="kal-axis__track"><i class="no" style="left:0%;width:10.714%"></i><i class="ok" style="left:10.714%;width:78.572%"></i><i class="no" style="left:89.286%;width:10.714%"></i></div>
+            <div class="kal-axis__ticks"><span class="is-major" style="left:10.714%">−40</span><span class="" style="left:16.071%">−25</span><span class="" style="left:25%">0</span><span class="" style="left:46.429%">60</span><span class="" style="left:75%">140</span><span class="is-major" style="left:89.286%">+180</span></div>
+            <p class="kal-axis__cap">Kapalinová lázeň FLUKE 7109A</p>
+            <div class="kal-axis__lane"><b class="is-best" style="left:16.071%;width:58.929%"><span>0,06 °C</span></b></div>
+            <p class="kal-axis__cap">Klimatická komora Vötschtechnik</p>
+            <div class="kal-axis__lane"><b class="" style="left:10.714%;width:14.286%"><span>0,50 °C</span></b><b class="" style="left:25%;width:21.429%"><span>0,13 °C</span></b><b class="" style="left:46.429%;width:42.857%"><span>0,34 °C</span></b></div>
+          </div>
+        </div>
+        <div class="kal-axis">
+          <div class="kal-axis__summary">
+            <p class="kal-axis__label">Relativní vlhkost</p>
+            <p class="kal-axis__range">10 až 95 <small>% RH</small></p>
+            <p class="kal-axis__best">nejistota od <strong>1,1 % RH</strong></p>
+          </div>
+          <div class="kal-axis__chart" role="img" aria-label="Relativní vlhkost: akreditováno 10 až 95 % RH při teplotách 10 až 40 °C v generátoru Rotronic HygroGen 2 — 10 až 30 % RH nejistota 1,1, 30 až 80 % RH 1,2, 80 až 95 % RH 1,8 % RH. 5 až 10 % RH kalibrujeme mimo rozsah akreditace, pod 5 a nad 95 % RH nekalibrujeme.">
+            <div class="kal-axis__track"><i class="no" style="left:0%;width:5%"></i><i class="out" style="left:5%;width:5%"></i><i class="ok" style="left:10%;width:85%"></i><i class="no" style="left:95%;width:5%"></i></div>
+            <div class="kal-axis__ticks"><span class="" style="left:5%">5</span><span class="is-major" style="left:10%">10</span><span class="" style="left:30%">30</span><span class="" style="left:80%">80</span><span class="is-major" style="left:95%">95</span></div>
+            <p class="kal-axis__cap">Generátor vlhkosti Rotronic HygroGen 2 · při teplotách (10 až 40) °C</p>
+            <div class="kal-axis__lane"><b class="is-best" style="left:10%;width:20%"><span>1,1 % RH</span></b><b class="" style="left:30%;width:50%"><span>1,2 % RH</span></b><b class="" style="left:80%;width:15%"><span>1,8 % RH</span></b></div>
+          </div>
+        </div>
+      </div>
       <ul class="kal-scalekey">
         <li><i class="s"></i>v rozsahu akreditace</li>
         <li><i class="h"></i>kalibrujeme mimo rozsah akreditace</li>
         <li><i class="n"></i>nekalibrujeme</li>
+        <li><i class="b"></i>nejistota U (k = 2) — nejnižší udávaná</li>
       </ul>
       <ul class="kal-strip">
         <li>Kalibrační laboratoř č.&nbsp;2432</li>
@@ -695,16 +689,31 @@
           </form>
         </div>
       </div>
-      <div class="uk-width-2-5@l">
-        <div class="kal-contact">
-          <p class="kal-eyebrow">Nebo rovnou</p>
-          <h3>Vedoucí kalibrační laboratoře</h3>
-          <div class="kal-ph">[Foto — konkrétní člověk, ne ilustrace]</div>
-          <p><strong style="color:#FDFDFD"><span class="kal-fill">[Jméno]</span></strong><br>
-            <span class="kal-fill">[telefon]</span><br>
-            <a href="mailto:laborator@datel.cz">laborator@datel.cz</a></p>
-          <p>Laboratoř: Jugoslávská 669/113,<br>Černá Pole, 613 00 Brno</p>
+      <div class="uk-width-2-5@l fx">
+        <div class="text">
+          <h3>Ing. Tomáš Pokorný</h3>
+          <p class="subtitle">Manažer obchodu, jednatel</p>
+          <div class="contact">
+            <p>
+              <a href="tel:+420775225941" class="tel_tomas_pokorny">
+                <picture><img loading="lazy" src="assets/site/svg/contactPhone.svg" alt="phone icon" data-uk-svg></picture>
+                <span>+420 775 225 941</span>
+              </a>
+            </p>
+            <p>
+              <a href="mailto:tomas.pokorny@datel.cz" class="mail_tomas_pokorny">
+                <picture><img loading="lazy" src="assets/site/svg/contactEmail.svg" alt="email icon" data-uk-svg></picture>
+                <span>tomas.pokorny@datel.cz</span>
+              </a>
+            </p>
+          </div>
+          <p class="txt">Kalibraci rádi probereme i osobně u vás v provozu. Nejlépe tak navrhneme kalibrační body a plán přesně podle vašich měřidel.</p>
+          <picture><img loading="lazy" src="assets/site/tIcon.png" alt="contact icon"></picture>
+          <p class="end">Rádi se s vámi sejdeme i online na platformě MS Teams</p>
         </div>
+        <picture class="picture">
+          <img loading="lazy" src="assets/img/tomas-pokorny.png" alt="Ing. Tomáš Pokorný" title="Ing. Tomáš Pokorný">
+        </picture>
       </div>
     </div>
   </div>
