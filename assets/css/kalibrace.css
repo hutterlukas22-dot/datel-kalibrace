@@ -271,8 +271,11 @@ section.formPack.kal-form .container:before{background:url(../img/pattern.svg) r
   section.formPack.kal-form .container{overflow-x:visible;overflow-y:clip}
   /* blok = postava po pas: hlava u jména, na konci sekce dojede spodní hrana bloku k lince
      a postava za ní zajede v pase. Nohy jsou vidět jen na hodně vysokém monitoru. */
-  .kal-form .kal-sticky{position:sticky;top:12rem;z-index:1;height:52rem;padding-right:22rem;box-sizing:border-box}
-  .kal-form .kal-person{position:absolute;top:0;right:-2rem;width:34rem;margin:0;transform:none}
+  /* výška bloku = výška okna pod hlavičkou (max. 80rem); postava se škáluje s ní, aby pas byl vždy
+     u spodní hrany bloku. Na konci sekce blok dojede k modré lince a postava za ni zajede v pase. */
+  .kal-form .kal-sticky{position:sticky;top:12rem;z-index:1;height:min(calc(100vh - 21rem),80rem);box-sizing:border-box}
+  .kal-form .kal-sticky>.text{max-width:32rem}
+  .kal-form .kal-person{position:absolute;top:0;right:0;width:min(calc((100vh - 21rem) * .62),48rem);margin:0;transform:none}
 }
 @media (max-width:1199px){
   .kal-person{display:none}
