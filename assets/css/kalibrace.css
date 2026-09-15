@@ -27,15 +27,15 @@
 .kal-eyebrow:before{content:"";flex:0 0 auto;width:5rem;height:2px;background:currentColor;margin-right:1rem}
 .kal-section--violet .kal-eyebrow{color:#46B9EB}
 .kal-h2{font:700 3.9rem/5.2rem 'Satoshi';color:#331F5E;margin:0 0 2.5rem}
-.kal-h2 span{display:block;color:#008FCD}
+.kal-h2 span{color:#008FCD}
 .kal-section--violet .kal-h2{color:#FDFDFD}
 .kal-section--violet .kal-h2 span{color:#46B9EB}
 .kal-h3{font:700 2.2rem/3.1rem 'Satoshi';color:#331F5E;margin:0 0 1.5rem}
 .kal-sub{font:700 2.2rem/3.6rem 'Satoshi';color:#535353;margin:0 0 2.5rem}
 .kal-lead{font:400 1.8rem/3.2rem 'Satoshi';color:#707070;margin:0 0 3rem;max-width:80rem}
-.kal-section p,.kal-p{font:400 1.6rem/2.7rem 'Satoshi';color:#707070;margin:0 0 2rem}
-.kal-section p strong{color:#535353}
-.kal-section--violet p{color:#E4E4E4}
+.kal-section p:not([class]),.kal-p{font:400 1.6rem/2.7rem 'Satoshi';color:#707070;margin:0 0 2rem}
+.kal-section p:not([class]) strong{color:#535353}
+.kal-section--violet p:not([class]){color:#E4E4E4}
 .kal-meta{font:400 1.4rem/2.4rem 'Satoshi'!important;color:#707070}
 .kal-center{text-align:center}
 .kal-center .kal-eyebrow{justify-content:center}
