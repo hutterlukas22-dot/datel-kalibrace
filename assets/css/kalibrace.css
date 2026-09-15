@@ -87,9 +87,13 @@ section.pageTop.kal-hero .con .container .text p.kal-hero-mark__txt{min-height:0
 .kal-section--violet .kal-strip li{color:#FDFDFD}
 
 /* ---------- tabulky rozsahu akreditace ---------- */
-.kal-table-wrap{overflow-x:auto;margin:0 0 3rem;border-radius:0 2rem 0 2rem;box-shadow:0 3px 6px rgba(0,0,0,.12);background:#FDFDFD}
+.kal-table-wrap{overflow-x:auto;margin:0 0 3rem;padding:1rem 3rem 3rem;border-radius:0 2rem 0 2rem;box-shadow:0 3px 6px rgba(0,0,0,.12);background:#FDFDFD}
 .kal-table{width:100%;min-width:72rem;border-collapse:collapse;font:400 1.5rem/2.3rem 'Satoshi';color:#535353}
-.kal-table caption{caption-side:top;text-align:left;font:700 2.2rem/3.1rem 'Satoshi';color:#331F5E;padding:2.5rem 2.5rem 1.5rem}
+.kal-table caption{caption-side:top;text-align:left;font:700 2.2rem/3.1rem 'Satoshi';color:#331F5E;padding:2rem 0 2rem}
+.kal-table__cap{display:inline-flex;align-items:center;gap:1.4rem}
+.kal-table__cap img{flex:0 0 auto;width:4.4rem;height:4.4rem}
+.kal-table thead th:first-child{border-radius:0 0 0 1rem}
+.kal-table thead th:last-child{border-radius:0 1rem 0 0}
 .kal-table th{background:#331F5E;color:#FDFDFD;font:700 1.2rem/1.8rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;text-align:left;padding:1.4rem 2rem}
 .kal-table td{padding:1.4rem 2rem;border-top:1px solid #E4E8EE;vertical-align:top}
 .kal-table td:first-child{font-weight:700;color:#331F5E}

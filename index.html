@@ -12,11 +12,11 @@
 <link rel="preload" href="assets/fonts/Satoshi-Regular.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/Satoshi-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Produkční CSS webu (kopie 1:1, cesty k obrázkům přesměrované na datel.cz) -->
-<link rel="stylesheet" href="assets/css/datel-site.css?v=mu32wgfz">
+<link rel="stylesheet" href="assets/css/datel-site.css?v=mu32yslq">
 <!-- Oprava písma pro celý web (Inter → Satoshi) -->
-<link rel="stylesheet" href="assets/css/datel-font-fix.css?v=mu32wgfz">
+<link rel="stylesheet" href="assets/css/datel-font-fix.css?v=mu32yslq">
 <!-- Nové styly této podstránky — na produkci stačí přidat jen tento soubor -->
-<link rel="stylesheet" href="assets/css/kalibrace.css?v=mu32wgfz">
+<link rel="stylesheet" href="assets/css/kalibrace.css?v=mu32yslq">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -200,7 +200,7 @@
 
     <div class="kal-table-wrap">
       <table class="kal-table">
-        <caption>Teplota</caption>
+        <caption><span class="kal-table__cap"><img src="assets/icons/mereni_teploty.svg" alt="">Teplota</span></caption>
         <thead><tr><th>Předmět kalibrace</th><th>Jmenovitý rozsah</th><th>U (k = 2)</th><th>Princip kalibrace</th></tr></thead>
         <tbody>
           <tr><td rowspan="4">Indikační teploměry včetně měřicích řetězců, vyjma skleněných teploměrů<span>Řetězec = čidlo + převodník + indikace; kalibruje se vždy jako celek. Patří sem i záznamníky teploty.</span></td><td class="r">−25 až 140 °C</td><td class="u">0,06 °C</td><td>Porovnání s etalonovým digitálním teploměrem v kapalinové lázni</td></tr>
@@ -213,7 +213,7 @@
 
     <div class="kal-table-wrap">
       <table class="kal-table">
-        <caption>Relativní vlhkost</caption>
+        <caption><span class="kal-table__cap"><img src="assets/icons/mereni_vlhkosti.svg" alt="">Relativní vlhkost</span></caption>
         <thead><tr><th>Předmět kalibrace</th><th>Jmenovitý rozsah</th><th>Teplota</th><th>U (k = 2)</th><th>Princip kalibrace</th></tr></thead>
         <tbody>
           <tr><td rowspan="3">Měřidla relativní vlhkosti vyjma psychrometrů<span>Včetně měřicích řetězců a záznamníků vlhkosti.</span></td><td class="r">10 až 30 % RH</td><td class="r" rowspan="3">10 až 40 °C</td><td class="u">1,1 % RH</td><td rowspan="3">Porovnávací měření s etalonovým vlhkoměrem v generátoru vlhkosti</td></tr>
