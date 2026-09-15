@@ -243,10 +243,10 @@ section.cooperation .container h2 span{display:inline}
 .kal-sector__media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
 .kal-sector:hover .kal-sector__media img{transform:scale(1.05)}
 .kal-sector__media:after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to top,rgba(51,31,94,.45),rgba(51,31,94,0));pointer-events:none}
-.kal-sector__tab{position:absolute;left:0;bottom:-2.2rem;z-index:2;width:4.4rem;height:4.4rem;display:flex;align-items:center;justify-content:center;background:#008FCD;border-radius:0 1.2rem 0 1.2rem;transition:background .2s}
+.kal-sector__tab{position:absolute;right:0;bottom:0;z-index:2;width:4.4rem;height:4.4rem;display:flex;align-items:center;justify-content:center;background:#008FCD;border-radius:1.2rem 0 0 0;transition:background .2s}
 .kal-sector__tab svg{width:1.6rem;height:1.6rem;color:#FDFDFD}
 .kal-sector:hover .kal-sector__tab{background:#46B9EB}
-.kal-sector__body{display:flex;flex-direction:column;flex:1;padding:3.4rem 2.6rem 2.6rem}
+.kal-sector__body{display:flex;flex-direction:column;flex:1;padding:2.8rem 2.6rem 2.6rem}
 .kal-sector__body h3{font:700 1.8rem/2.5rem 'Satoshi';color:#331F5E;margin:0 0 1rem}
 .kal-sector__body p{font:400 1.4rem/2.3rem 'Satoshi'!important;color:#707070!important;margin:0 0 1.8rem!important;flex:1}
 .kal-sector__more{font:700 1.3rem/2rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;color:#008FCD}
