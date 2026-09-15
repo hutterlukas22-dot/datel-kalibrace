@@ -14,3 +14,7 @@ section.mainBar .container .mainPack .uk-grid>div .top form input[type="search"]
 section.footer .container .content .top .uk-grid>div .logoPack .claim{font-family:'Satoshi',sans-serif!important}
 section.footer .container .content .top .uk-grid>div .footerMenu h3{font-family:'Satoshi',sans-serif!important}
 section.numberMenu .container .uk-grid>div .numberBox>span{font-family:'Satoshi',sans-serif!important}
+
+/* Logo v hlavičce a patičce: kompletní originální SVG s claimem (místo PNG + claimu v HTML textu). */
+.logoPack .logo.logo--claim{height:auto!important;overflow:visible}
+.logoPack .logo.logo--claim img{display:block;width:100%;height:auto!important}
