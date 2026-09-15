@@ -271,8 +271,8 @@ section.formPack.kal-form .container:before{background:url(../img/pattern.svg) r
 .kal-person img{display:block;width:100%;height:auto}
 @media (min-width:1200px){
   section.formPack.kal-form{overflow:clip}
-  /* ořez jen dole u modré linky (do stran postava přesahovat smí) */
-  section.formPack.kal-form .container{overflow-x:visible;overflow-y:clip}
+  /* ořez dělá sekce (overflow:clip) — její spodní hrana je přesně na modré lince,
+     kterou web kreslí jako ::after vůči sekci; kontejner neořezává nic */
   /* blok = postava po pas: hlava u jména, na konci sekce dojede spodní hrana bloku k lince
      a postava za ní zajede v pase. Nohy jsou vidět jen na hodně vysokém monitoru. */
   /* výška bloku = výška okna pod hlavičkou (max. 80rem); postava se škáluje s ní, aby pas byl vždy
