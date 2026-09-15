@@ -258,3 +258,17 @@ section.cooperation .container h2 span{display:inline}
 /* formulář: web roztahuje texturu přes celou sekci (cover) — u vyššího formuláře je obří.
    Nahrazeno čistou dlaždicí patternu ve stejném měřítku jako ostatní fialové sekce. */
 section.formPack.kal-form .container:before{background:url(../img/pattern.svg) repeat 0 0/235.25px 262.5px;opacity:.5}
+
+/* ---------- kontakt u formuláře: celá postava, sticky jen na desktopu ----------
+   Sloupec se natáhne na výšku formuláře; obsah se přilepí pod hlavičku a odlepí na konci sekce. */
+.kal-form .kal-sticky{display:flex;align-items:flex-start;gap:0;position:relative}
+.kal-form .kal-sticky>.text{position:relative;z-index:2;flex:1 1 auto;min-width:0}
+.kal-person{display:block;flex:0 0 auto;width:26rem;margin-left:-4rem;position:relative;z-index:1}
+.kal-person img{display:block;width:100%;height:auto}
+@media (min-width:1200px){
+  section.formPack.kal-form{overflow:clip}
+  .kal-form .kal-sticky{position:sticky;top:12rem}
+}
+@media (max-width:1199px){
+  .kal-person{display:none}
+}
