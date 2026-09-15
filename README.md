@@ -11,7 +11,7 @@ Hlavička, patička, písmo, tlačítka a formulářová sekce jsou **1:1 z prod
 | `src/obsah.html` | obsah mezi hlavičku a patičku šablony stránky |
 | `src/head.html` | title, description, canonical, `noindex` a strukturovaná data (JSON-LD) do `<head>` |
 | `assets/css/kalibrace.css` | přidat za hlavní CSS webu — všechny třídy mají předponu `.kal-`, nic z webu nepřepisují |
-| `assets/css/datel-font-fix.css` | **globálně na celý web** — 14 prvků (claim v hlavičce a patičce, nadpisy menu v patičce, vyhledávání) web dnes sází písmem Inter; soubor je převádí na firemní Satoshi. Obsahuje i úpravu loga: v hlavičce a patičce je kompletní originální SVG s claimem (`assets/img/logo/`) místo PNG s claimem v HTML textu |
+| `assets/css/datel-font-fix.css` | **globálně na celý web** — 14 prvků (claim v hlavičce a patičce, nadpisy menu v patičce, vyhledávání) web dnes sází písmem Inter; soubor je převádí na firemní Satoshi. Obsahuje i úpravu loga: v hlavičce, patičce i v okně vyhledávání je kompletní originální SVG s claimem podle manuálu (`assets/img/logo/`) místo PNG s claimem v HTML textu |
 | `assets/js/kalibrace.js` | přidat za hlavní JS webu (UIkit je už na webu) |
 | `assets/img/*`, `assets/icons/*` | obrázky a ikony — cesty v HTML/CSS upravit podle úložiště webu |
 
@@ -25,6 +25,9 @@ Hlavička, patička, písmo, tlačítka a formulářová sekce jsou **1:1 z prod
 - FAQ je nativní UIkit `uk-accordion`, výchozí stav zavřený; `schema.org/FAQPage` je v `head.html`.
 - Mřížky jsou UIkit (`uk-grid`, `uk-child-width-*`), zlomy shodné s webem (640 / 960 / 1200 px).
 - Brand: štítek s linkou, nadpisy H2 fialová + modrá, rohy `0 2rem 0 2rem`, pattern na fialové 50 %.
+- Tabulky mají jednotný styl DATEL pro web i tisk (design system, Komponenty → Tabulky): hlavička `#B4E2F6`
+  s tučným šedým textem, bílé tělo, mřížka 1 px `#9D9D9D` včetně rámu, hranaté rohy, bez zebry.
+  Web dnes podbarvuje sudé řádky všech tabulek (`table tbody tr:nth-child(2n)`) — `.kal-table` to ruší.
 
 ## Tlačítka a formulář (#poptavka)
 

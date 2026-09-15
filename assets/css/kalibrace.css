@@ -86,19 +86,21 @@ section.pageTop.kal-hero .con .container .text p.kal-hero-mark__txt{min-height:0
 .kal-section--violet .kal-strip{border-top-color:rgba(253,253,253,.2)}
 .kal-section--violet .kal-strip li{color:#FDFDFD}
 
-/* ---------- tabulky rozsahu akreditace ---------- */
+/* ---------- tabulky rozsahu akreditace ----------
+   Jednotný styl tabulek DATEL (tiskoviny i web, viz section.connectionsTable na webu a design system):
+   světle modrá hlavička, tučný šedý text bez verzálek, bílé tělo, tenká šedá mřížka včetně vnějšího rámu, hranaté rohy. */
 .kal-table-wrap{overflow-x:auto;margin:0 0 3rem;padding:1rem 3rem 3rem;border-radius:0 2rem 0 2rem;box-shadow:0 3px 6px rgba(0,0,0,.12);background:#FDFDFD}
-.kal-table{width:100%;min-width:72rem;border-collapse:collapse;font:400 1.5rem/2.3rem 'Satoshi';color:#535353}
+.kal-table{width:100%;min-width:72rem;border-collapse:collapse;border:1px solid #9D9D9D;background:#FDFDFD;font:400 1.6rem/2.7rem 'Satoshi';color:#707070}
 .kal-table caption{caption-side:top;text-align:left;font:700 2.2rem/3.1rem 'Satoshi';color:#331F5E;padding:2rem 0 2rem}
 .kal-table__cap{display:inline-flex;align-items:center;gap:1.4rem}
 .kal-table__cap img{flex:0 0 auto;width:4.4rem;height:4.4rem}
-.kal-table thead th:first-child{border-radius:0 0 0 1rem}
-.kal-table thead th:last-child{border-radius:0 1rem 0 0}
-.kal-table th{background:#331F5E;color:#FDFDFD;font:700 1.2rem/1.8rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;text-align:left;padding:1.4rem 2rem}
-.kal-table td{padding:1.4rem 2rem;border-top:1px solid #E4E8EE;vertical-align:top}
-.kal-table td:first-child{font-weight:700;color:#331F5E}
-.kal-table td:first-child span{display:block;margin-top:.6rem;font:400 1.3rem/2rem 'Satoshi';color:#707070}
-.kal-table .u{font-weight:700;color:#008FCD;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kal-table th,.kal-table td{border:1px solid #9D9D9D;padding:1.4rem 2rem;text-align:left;vertical-align:top;background:transparent;border-radius:0}
+/* web podbarvuje sudé řádky všech tabulek (table tbody tr:nth-child(2n)) — jednotný styl je bez zebry */
+.kal-table tr,.kal-table tbody tr:nth-child(n){background:transparent}
+.kal-table thead th{background:#B4E2F6;font:700 1.8rem/2.5rem 'Satoshi';color:#535353;vertical-align:middle}
+.kal-table .kal-table__item{font-weight:700;color:#535353}
+.kal-table .kal-table__item span{display:block;margin-top:.6rem;font:400 1.4rem/2.2rem 'Satoshi';color:#707070}
+.kal-table .u{font-weight:700;color:#535353;font-variant-numeric:tabular-nums;white-space:nowrap}
 .kal-table .r{white-space:nowrap;font-variant-numeric:tabular-nums}
 
 /* ---------- závazné znění ---------- */
@@ -291,17 +293,6 @@ section.formPack.kal-form:before,section.formPack.kal-form:after{height:100%;bac
 
 /* úvod „Čím kalibrujeme“ (převzatý blok ourServices): nadpis v jednom řádku jako ostatní H2 */
 section.ourServices.kal-services .container .uk-grid>div .text h2 span{display:inline}
-
-/* tabulky rozsahu: jednotné linky mezi všemi sloupci (i vedle sloučených buněk), bez zděděného podbarvení */
-.kal-table th,.kal-table td{border:0;border-left:1px solid #E4E8EE;background:transparent}
-.kal-table thead th{background:#331F5E;border-left-color:rgba(253,253,253,.18)}
-.kal-table tbody td{border-top:1px solid #E4E8EE}
-.kal-table th:first-child,.kal-table tbody tr:first-child td:first-child{border-left:0}
-.kal-table tbody tr:last-child td,.kal-table tbody td[rowspan]{border-bottom:1px solid #E4E8EE}
-/* vnější svislé linky tabulky (vlevo a vpravo) */
-.kal-table{border-collapse:collapse;border-left:1px solid #E4E8EE;border-right:1px solid #E4E8EE}
-.kal-table thead th:first-child{border-left:1px solid #331F5E}
-.kal-table thead th:last-child{border-right:1px solid #331F5E}
 
 /* úvod „Čím kalibrujeme“: horní odsazení jako ostatní sekce stránky (web má u tohoto bloku jen 2rem) */
 section.ourServices.kal-services{padding-top:10rem}
