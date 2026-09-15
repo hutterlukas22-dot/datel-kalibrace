@@ -1,0 +1,190 @@
+/* =====================================================================
+   Kalibrace a justáž měřidel — styly nové podstránky
+   Navazuje na produkční CSS datel.cz (1rem = 10px, Satoshi, UIkit).
+   Všechny nové třídy mají předponu .kal- — nic z webu se nepřepisuje.
+   Barvy: #331F5E fialová · #008FCD modrá · #46B9EB světle modrá
+          #23CE6B zelená (jen CTA) · #535353 podnadpis · #707070 text
+   Rohy:  vždy border-radius: 0 2rem 0 2rem (štítky 0 1rem 0 1rem)
+   ===================================================================== */
+
+/* ---------- sekce ---------- */
+.kal-section{position:relative;padding:10rem 0}
+.kal-section--tight{padding:6rem 0}
+.kal-section--blue{background:#DAF1FB}
+.kal-section--violet{background:#331F5E;overflow:hidden}
+.kal-section--violet:before,.kal-section--violet:after{content:"";position:absolute;bottom:0;width:3.7rem;height:100%;background:url(https://www.datel.cz/www/frontend/images/rulerL.png) repeat-y;background-size:contain;z-index:2;opacity:.5}
+.kal-section--violet:before{left:0}
+.kal-section--violet:after{right:0;background-image:url(https://www.datel.cz/www/frontend/images/rulerR.png)}
+.kal-section .container{position:relative;z-index:3}
+.kal-narrow{max-width:94rem}
+
+/* pattern — čistá rapportová dlaždice, opakuje se do všech stran */
+.kal-pattern{position:absolute;inset:0;pointer-events:none;background:url(../img/pattern.svg) repeat 0 0/235.25px 262.5px;opacity:.2;z-index:1}
+.kal-section--violet .kal-pattern,.kal-hero .kal-pattern{opacity:.5}
+
+/* ---------- hlavička sekce: štítek → nadpis → perex ---------- */
+.kal-eyebrow{display:flex;align-items:center;font:700 1.4rem/2.1rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;color:#331F5E;margin:0 0 1.5rem}
+.kal-eyebrow:before{content:"";flex:0 0 auto;width:5rem;height:2px;background:currentColor;margin-right:1rem}
+.kal-section--violet .kal-eyebrow{color:#46B9EB}
+.kal-h2{font:700 3.9rem/5.2rem 'Satoshi';color:#331F5E;margin:0 0 2.5rem}
+.kal-h2 span{display:block;color:#008FCD}
+.kal-section--violet .kal-h2{color:#FDFDFD}
+.kal-section--violet .kal-h2 span{color:#46B9EB}
+.kal-h3{font:700 2.2rem/3.1rem 'Satoshi';color:#331F5E;margin:0 0 1.5rem}
+.kal-sub{font:700 2.2rem/3.6rem 'Satoshi';color:#535353;margin:0 0 2.5rem}
+.kal-lead{font:400 1.8rem/3.2rem 'Satoshi';color:#707070;margin:0 0 3rem;max-width:80rem}
+.kal-section p,.kal-p{font:400 1.6rem/2.7rem 'Satoshi';color:#707070;margin:0 0 2rem}
+.kal-section p strong{color:#535353}
+.kal-section--violet p{color:#E4E4E4}
+.kal-meta{font:400 1.4rem/2.4rem 'Satoshi'!important;color:#707070}
+.kal-center{text-align:center}
+.kal-center .kal-eyebrow{justify-content:center}
+.kal-actions{display:flex;flex-wrap:wrap;gap:1.6rem 2rem;align-items:center;margin-top:3rem}
+
+/* ---------- karty ---------- */
+.kal-card{position:relative;height:100%;box-sizing:border-box;background:#FDFDFD;border-radius:0 2rem 0 2rem;box-shadow:0 3px 6px rgba(0,0,0,.12);padding:3.5rem 3rem}
+.kal-card p:last-child{margin-bottom:0}
+.kal-card__num{font:700 1.4rem/2.1rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;color:#008FCD;margin:0 0 1rem}
+.kal-card--line{box-shadow:none;border:1px solid #D4E6EF;background:transparent}
+.kal-card--blue{box-shadow:none;background:#DAF1FB}
+.kal-card__media{margin:-3.5rem -3rem 2.5rem;height:22rem;background:#FDFDFD;border-bottom:1px solid #E4E8EE;border-radius:0 2rem 0 0;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.kal-card__media img{width:100%;height:100%;object-fit:contain;padding:2rem;box-sizing:border-box}
+.kal-card__icon{width:8rem;height:8rem;margin:0 0 2rem}
+.kal-card__icon img{width:100%;height:100%}
+
+/* ---------- seznam s brand odrážkou ---------- */
+.kal-list{list-style:none;margin:0 0 2.5rem;padding:0}
+.kal-list li{position:relative;font:700 1.6rem/2.5rem 'Satoshi';color:#707070;padding-left:3rem;margin-bottom:1.2rem}
+.kal-list li:before{content:"";position:absolute;left:0;top:.2rem;width:2rem;height:2rem;background:url(../icons/odrazka.svg) no-repeat center/contain}
+.kal-list li span{display:block;font-weight:400}
+.kal-list--x li:before{background:none;border:2px solid #9D9D9D;border-radius:50%;box-sizing:border-box}
+.kal-list--x li:after{content:"";position:absolute;left:.55rem;top:1.15rem;width:.9rem;height:2px;background:#9D9D9D}
+
+/* ---------- HERO (rozšiřuje section.pageTop z webu) ---------- */
+section.pageTop.kal-hero .con .container{padding-bottom:16rem}
+section.pageTop.kal-hero .con .container .text{max-width:72rem}
+.kal-hero h1 span{display:block;color:#46B9EB}
+section.pageTop.kal-hero .con .container .text p.kal-hero__lead{min-height:0;margin:2rem 0 0}
+.kal-hero-mark{display:flex;align-items:center;gap:2rem;margin:0 0 3rem}
+.kal-hero-mark__logo{flex:0 0 auto;width:8.4rem;height:6.4rem;border-radius:0 1rem 0 1rem;background:#FDFDFD;display:flex;align-items:center;justify-content:center;font:700 1.1rem/1.4rem 'Satoshi';color:#331F5E;text-align:center;padding:.6rem;box-sizing:border-box}
+section.pageTop.kal-hero .con .container .text p.kal-hero-mark__txt{min-height:0;margin:0;font:400 1.4rem/2.2rem 'Satoshi';color:#E4E4E4}
+.kal-hero-mark__txt strong{display:block;color:#FDFDFD}
+.kal-hero .kal-actions{margin-top:3.5rem}
+
+/* rozsah — karta přesahující hero */
+.kal-scope{position:relative;z-index:8;margin-top:-12rem}
+.kal-scope .kal-card{padding:4rem 4.5rem}
+.kal-scale{display:block;width:100%;height:auto}
+.kal-scalekey{display:flex;flex-wrap:wrap;gap:1rem 3rem;margin:2rem 0 0;padding:0;list-style:none;font:500 1.4rem/2.1rem 'Satoshi';color:#535353}
+.kal-scalekey i{display:inline-block;width:2.4rem;height:1.2rem;margin-right:.8rem;vertical-align:-1px;border-radius:0 .5rem 0 .5rem}
+.kal-scalekey .s{background:#008FCD}
+.kal-scalekey .h{background:repeating-linear-gradient(45deg,#B4E2F6 0 2px,#fff 2px 5px);border:1px solid #B4E2F6}
+.kal-scalekey .n{background:#F2F5F8;border:1px solid #E4E8EE}
+.kal-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem;margin:3.5rem 0 0;padding:3rem 0 0;border-top:1px solid #E4E8EE;list-style:none}
+.kal-strip li{display:flex;align-items:center;gap:1.2rem;font:700 1.6rem/2.3rem 'Satoshi';color:#331F5E}
+.kal-strip li:before{content:"";flex:0 0 auto;width:2.4rem;height:2.4rem;background:url(../icons/odrazka.svg) no-repeat center/contain}
+.kal-section--violet .kal-strip{border-top-color:rgba(253,253,253,.2)}
+.kal-section--violet .kal-strip li{color:#FDFDFD}
+
+/* ---------- tabulky rozsahu akreditace ---------- */
+.kal-table-wrap{overflow-x:auto;margin:0 0 3rem;border-radius:0 2rem 0 2rem;box-shadow:0 3px 6px rgba(0,0,0,.12);background:#FDFDFD}
+.kal-table{width:100%;min-width:72rem;border-collapse:collapse;font:400 1.5rem/2.3rem 'Satoshi';color:#535353}
+.kal-table caption{caption-side:top;text-align:left;font:700 2.2rem/3.1rem 'Satoshi';color:#331F5E;padding:2.5rem 2.5rem 1.5rem}
+.kal-table th{background:#331F5E;color:#FDFDFD;font:700 1.2rem/1.8rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;text-align:left;padding:1.4rem 2rem}
+.kal-table td{padding:1.4rem 2rem;border-top:1px solid #E4E8EE;vertical-align:top}
+.kal-table td:first-child{font-weight:700;color:#331F5E}
+.kal-table td:first-child span{display:block;margin-top:.6rem;font:400 1.3rem/2rem 'Satoshi';color:#707070}
+.kal-table .u{font-weight:700;color:#008FCD;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kal-table .r{white-space:nowrap;font-variant-numeric:tabular-nums}
+
+/* ---------- závazné znění ---------- */
+.kal-legal{display:flex;gap:1.6rem;align-items:flex-start;background:#FDFDFD;border-radius:0 2rem 0 2rem;padding:2.2rem 2.5rem;margin:0 0 3rem;font:700 1.6rem/2.6rem 'Satoshi';color:#331F5E}
+.kal-legal img{flex:0 0 auto;width:2.4rem;height:2.4rem;margin-top:.1rem}
+
+/* ---------- průběh zakázky ---------- */
+.kal-steps{list-style:none;margin:0;padding:0;counter-reset:k}
+.kal-steps li{position:relative;counter-increment:k;padding:0 0 3.5rem 7.6rem}
+.kal-steps li:before{content:counter(k,decimal-leading-zero);position:absolute;left:0;top:0;width:5rem;height:5rem;display:flex;align-items:center;justify-content:center;background:#008FCD;color:#FDFDFD;font:700 1.6rem/1 'Satoshi';border-radius:0 1rem 0 1rem;font-variant-numeric:tabular-nums}
+.kal-steps li:after{content:"";position:absolute;left:2.4rem;top:5.8rem;bottom:.8rem;width:2px;background:#B4E2F6}
+.kal-steps li:last-child{padding-bottom:0}
+.kal-steps li:last-child:after{display:none}
+.kal-steps h3{font:700 2rem/2.8rem 'Satoshi';color:#331F5E;margin:1rem 0 .8rem}
+.kal-steps p{margin:0!important}
+.kal-steps--compact li{padding-bottom:2.2rem}
+.kal-steps--compact h3{font-size:1.8rem;margin-top:1.1rem}
+
+/* ---------- odvětví ---------- */
+.kal-industry{height:100%;box-sizing:border-box;border-radius:0 2rem 0 2rem;background:#FDFDFD;box-shadow:0 3px 6px rgba(0,0,0,.12);padding:2.8rem 2.6rem;border-top:4px solid #008FCD}
+.kal-industry h3{font:700 1.8rem/2.5rem 'Satoshi';color:#331F5E;margin:0 0 1rem}
+.kal-industry p{font-size:1.4rem!important;line-height:2.3rem!important;margin:0!important}
+
+/* ---------- FAQ (UIkit accordion) ---------- */
+.kal-faq{list-style:none;margin:0;padding:0;border-top:1px solid #D4E6EF}
+.kal-faq>li{margin:0!important;border-bottom:1px solid #D4E6EF}
+.kal-faq .uk-accordion-title{display:flex;justify-content:space-between;gap:2rem;align-items:center;padding:2.4rem 0;font:700 1.8rem/2.6rem 'Satoshi';color:#331F5E}
+.kal-faq .uk-accordion-title:before{display:none}
+.kal-faq .uk-accordion-title:after{content:"";flex:0 0 auto;width:3.2rem;height:3.2rem;border-radius:0 1rem 0 1rem;background:#DAF1FB url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008FCD' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") no-repeat center/1.4rem;transition:transform .2s}
+.kal-faq .uk-open .uk-accordion-title:after{transform:rotate(45deg)}
+.kal-faq .uk-accordion-title:hover{color:#008FCD}
+.kal-faq .uk-accordion-content{margin:0;padding:0 5rem 2.4rem 0}
+
+/* ---------- reference ---------- */
+.kal-logos{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:1.2rem;margin:0 0 4rem;padding:0;list-style:none}
+.kal-logos li{height:7rem;display:flex;align-items:center;justify-content:center;text-align:center;border:1px dashed #B4E2F6;border-radius:0 1rem 0 1rem;font:700 1.2rem/1.6rem 'Satoshi';color:#707070;padding:.6rem;box-sizing:border-box;filter:grayscale(1)}
+.kal-quote{height:100%;box-sizing:border-box;border-radius:0 2rem 0 2rem;background:#331F5E;padding:3.5rem;position:relative;overflow:hidden}
+.kal-quote p{position:relative;z-index:2;font:700 1.8rem/3rem 'Satoshi'!important;color:#FDFDFD!important}
+.kal-quote .kal-quote__who{font:400 1.4rem/2.1rem 'Satoshi'!important;color:#B4E2F6!important;margin:0!important}
+
+/* ---------- viditelný zástupný obsah (doplnit před spuštěním) ---------- */
+.kal-ph{display:flex;align-items:center;justify-content:center;text-align:center;min-height:22rem;padding:2rem;box-sizing:border-box;border:2px dashed #46B9EB;border-radius:0 2rem 0 2rem;background:#F3FAFD;font:700 1.3rem/2rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;color:#008FCD}
+.kal-fill{background:#FFF4D6;color:#8A6314;border-radius:0 .6rem 0 .6rem;padding:0 .5rem}
+
+/* ---------- fotka s brand rohy ---------- */
+.kal-photo{display:block;width:100%;height:100%;min-height:30rem;object-fit:cover;border-radius:0 2rem 0 2rem}
+
+/* ---------- poptávkový formulář (rozšiřuje section.formPack) ---------- */
+.kal-form .formPanel{max-width:none!important;margin:0!important}
+.kal-form fieldset{position:relative;border:0;padding:0;margin:0}
+.kal-form .kal-label{display:flex;align-items:center;gap:.8rem;font:700 1.3rem/2rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;color:#B4E2F6;margin:0 0 .8rem}
+.kal-form select,.kal-form input.kal-input,.kal-form textarea.kal-input{width:100%;height:5.2rem;box-sizing:border-box;padding:0 2rem;border:0;border-radius:0 1rem 0 1rem;background:#FDFDFD;font:400 1.6rem/2.4rem 'Satoshi';color:#331F5E}
+.kal-form textarea.kal-input{height:11.2rem;padding:1.5rem 2rem;resize:vertical}
+.kal-form select{appearance:none;-webkit-appearance:none;background:#FDFDFD url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23008FCD' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 1.8rem center/1.6rem;padding-right:5rem}
+.kal-form :focus-visible{outline:2px solid #46B9EB;outline-offset:2px}
+.kal-form .kal-hint{font:400 1.3rem/2rem 'Satoshi'!important;color:#B4E2F6!important;text-transform:none!important;text-align:left!important;margin:.6rem 0 0!important}
+.kal-choices{display:flex;flex-wrap:wrap;gap:1rem}
+.kal-choices label{cursor:pointer}
+.kal-choices input{position:absolute;opacity:0;pointer-events:none}
+.kal-choices span{display:inline-flex;align-items:center;min-height:4.4rem;padding:0 1.8rem;border:2px solid rgba(253,253,253,.35);border-radius:0 1rem 0 1rem;font:700 1.4rem/2rem 'Satoshi';color:#FDFDFD;transition:.2s}
+.kal-choices input:checked+span{background:#FDFDFD;border-color:#FDFDFD;color:#331F5E}
+.kal-choices input:focus-visible+span{outline:2px solid #46B9EB;outline-offset:2px}
+.kal-info{display:inline-flex;align-items:center;justify-content:center;width:2.2rem;height:2.2rem;padding:0;border:2px solid #46B9EB;border-radius:50%;background:none;color:#46B9EB;font:700 1.2rem/1 'Satoshi';cursor:pointer;text-transform:none}
+.kal-info[aria-expanded="true"]{background:#46B9EB;color:#331F5E}
+.kal-info-text{margin:.2rem 0 1rem;padding:1.4rem 1.6rem;border-radius:0 1rem 0 1rem;background:rgba(253,253,253,.1);font:400 1.4rem/2.2rem 'Satoshi';color:#E4E4E4;text-transform:none}
+.kal-conditional{padding-left:1.6rem;border-left:2px solid #46B9EB}
+.kal-contact{border-radius:0 2rem 0 2rem;background:rgba(253,253,253,.08);padding:3.5rem 3rem;height:100%;box-sizing:border-box}
+.kal-contact .kal-eyebrow{color:#46B9EB}
+.kal-contact h3{font:700 2.2rem/3.1rem 'Satoshi';color:#FDFDFD;margin:0 0 2rem}
+.kal-contact p{font:400 1.6rem/2.7rem 'Satoshi'!important;color:#E4E4E4!important;text-align:left!important;text-transform:none!important}
+.kal-contact a{color:#23CE6B;font-weight:700}
+.kal-contact .kal-ph{min-height:16rem;margin:0 0 2rem;background:rgba(253,253,253,.05)}
+
+/* ---------- responzivita (zlomy shodné s webem) ---------- */
+@media (max-width:1199px){
+  .kal-logos{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (max-width:959px){
+  .kal-section{padding:6rem 0}
+  .kal-h2{font-size:3rem;line-height:4rem}
+  .kal-strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kal-scope{margin-top:-8rem}
+  .kal-scope .kal-card{padding:3rem 2.2rem}
+  section.pageTop.kal-hero .con .container{padding-bottom:11rem}
+  .kal-faq .uk-accordion-content{padding-right:0}
+}
+@media (max-width:639px){
+  .kal-strip{grid-template-columns:1fr}
+  .kal-logos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kal-hero-mark{align-items:flex-start}
+  .kal-card{padding:3rem 2.2rem}
+  .kal-card__media{margin:-3rem -2.2rem 2.2rem}
+}

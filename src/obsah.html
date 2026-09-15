@@ -1,0 +1,662 @@
+<!-- =====================================================================
+     KALIBRACE A JUSTÁŽ MĚŘIDEL — obsah podstránky /kalibrace-a-justaz-meridel
+     Vložit mezi hlavičku a patičku šablony webu. Potřebuje:
+     assets/css/kalibrace.css, assets/js/kalibrace.js, assets/img/*, assets/icons/*
+     Prvky s třídou .kal-ph a .kal-fill jsou ZÁSTUPNÉ — doplnit před spuštěním.
+     ===================================================================== -->
+
+<!-- § 00 HERO — rozšiřuje existující section.pageTop -->
+<section class="smaller pageTop kal-hero">
+  <span class="con">
+    <picture>
+      <img loading="eager" src="assets/img/kalibrace-hygrogen.jpg" alt="Kalibrace vlhkoměru v generátoru vlhkosti Rotronic HygroGen" class="uk-visible@l">
+    </picture>
+    <div class="container">
+      <ul class="uk-breadcrumb">
+        <li><a href="https://www.datel.cz/"><picture><img src="assets/site/svg/breadHome.svg" alt="Úvod" data-uk-svg></picture></a></li>
+        <li><span>Služby a podpora</span></li>
+        <li><span>Kalibrace a justáž měřidel</span></li>
+      </ul>
+      <div class="text">
+        <div class="kal-hero-mark">
+          <div class="kal-hero-mark__logo" title="Doplnit značku ČIA, až bude přidělená">[ZNAČKA ČIA]<br>AK 2432</div>
+          <p class="kal-hero-mark__txt"><strong>Kalibrační laboratoř DATA ELEKTRONIK</strong>Kalibrační laboratoř č. 2432 akreditovaná ČIA podle ČSN EN ISO/IEC 17025:2018</p>
+        </div>
+        <h1>Akreditovaná kalibrace <span>a justáž teploměrů a vlhkoměrů</span></h1>
+        <p class="kal-hero__lead">Kalibrujeme teplotu v rozsahu (−40 až +180) °C a relativní vlhkost (10 až 95) % RH. V laboratoři v Brně i přímo u vás v provozu. Pro provozy, kde na přesnosti opravdu záleží.</p>
+        <div class="kal-actions">
+          <a href="#poptavka" class="button" data-uk-scroll data-typ="standardni">Nezávazně poptat kalibraci</a>
+          <a href="#rozsah" class="button white" data-uk-scroll>Rozsah akreditace a nejistoty</a>
+        </div>
+      </div>
+    </div>
+  </span>
+</section>
+
+<!-- § 00 pokračování — osa rozsahu akreditace a pás výhod -->
+<section class="kal-scope">
+  <div class="container">
+    <div class="kal-card">
+      <p class="kal-eyebrow">Rozsah akreditace v kostce</p>
+      <!-- Osa: x = 8 + (hodnota − min) * (624 / (max − min)).
+           Teplota: zobrazeno −70 až +210 °C, akreditováno −40 až +180 °C.
+           Vlhkost: zobrazeno 0 až 100 % RH, akreditováno 10 až 95 % RH. Hodnoty z CMC (příloha osvědčení). -->
+      <svg class="kal-scale" viewBox="0 0 640 236" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rozsah akreditace. Teplota −40 až +180 °C: v kapalinové lázni FLUKE 7109A −25 až 140 °C s nejistotou 0,06 °C; v klimatické komoře Vötschtechnik −40 až 0 °C s 0,50 °C, 0 až 60 °C s 0,13 °C a 60 až 180 °C s 0,34 °C. Mimo tento rozsah teplotu nekalibrujeme. Relativní vlhkost 10 až 95 % RH při teplotách 10 až 40 °C v generátoru Rotronic HygroGen 2: 10 až 30 % RH s nejistotou 1,1, 30 až 80 % RH s 1,2 a 80 až 95 % RH s 1,8 % RH. Vlhkost 5 až 10 % RH kalibrujeme mimo rozsah akreditace, pod 5 a nad 95 % RH nekalibrujeme.">
+        <defs>
+          <pattern id="kal-hx" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FFFFFF"/><line x1="0" y1="0" x2="0" y2="6" stroke="#B4E2F6" stroke-width="2"/></pattern>
+          <pattern id="kal-nx" width="7" height="7" patternUnits="userSpaceOnUse"><rect width="7" height="7" fill="#F2F5F8"/></pattern>
+        </defs>
+        <g font-family="Satoshi, sans-serif">
+          <!-- TEPLOTA -->
+          <text x="8" y="12" font-size="10.5" font-weight="700" fill="#331F5E" letter-spacing=".6">TEPLOTA °C</text>
+          <text x="632" y="12" text-anchor="end" font-size="10.5" font-weight="700" fill="#008FCD">nejistota od 0,06 °C</text>
+          <rect x="8" y="20" width="67" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
+          <rect x="75" y="20" width="490" height="12" fill="#008FCD"/>
+          <rect x="565" y="20" width="67" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
+          <g stroke="#331F5E"><line x1="75" y1="32" x2="75" y2="40"/><line x1="108" y1="32" x2="108" y2="37"/><line x1="164" y1="32" x2="164" y2="37"/><line x1="298" y1="32" x2="298" y2="37"/><line x1="476" y1="32" x2="476" y2="37"/><line x1="565" y1="32" x2="565" y2="40"/></g>
+          <g font-size="10" font-weight="500" fill="#331F5E" text-anchor="middle"><text x="75" y="51">−40</text><text x="108" y="51">−25</text><text x="164" y="51">0</text><text x="298" y="51">60</text><text x="476" y="51">140</text><text x="565" y="51">+180</text></g>
+          <g font-size="8.5" fill="#9D9D9D"><text x="8" y="51">nekalibrujeme</text><text x="632" y="51" text-anchor="end">nekalibrujeme</text></g>
+          <text x="8" y="69" font-size="8.5" font-weight="700" fill="#707070" letter-spacing=".5">NEJNIŽŠÍ UDÁVANÁ ROZŠÍŘENÁ NEJISTOTA U (k = 2)</text>
+          <rect x="108" y="75" width="368" height="15" fill="#FFFFFF" stroke="#008FCD"/>
+          <text x="292" y="86" text-anchor="middle" font-size="9.5" font-weight="700" fill="#008FCD">0,06 °C</text>
+          <text x="292" y="101" text-anchor="middle" font-size="8.5" fill="#707070">kapalinová lázeň FLUKE 7109A</text>
+          <g fill="#FFFFFF" stroke="#46B9EB"><rect x="75" y="108" width="89" height="15"/><rect x="164" y="108" width="134" height="15"/><rect x="298" y="108" width="267" height="15"/></g>
+          <g font-size="9.5" font-weight="700" fill="#535353" text-anchor="middle"><text x="119" y="119">0,50 °C</text><text x="231" y="119">0,13 °C</text><text x="431" y="119">0,34 °C</text></g>
+          <text x="320" y="134" text-anchor="middle" font-size="8.5" fill="#707070">klimatická komora Vötschtechnik</text>
+          <!-- VLHKOST -->
+          <text x="8" y="164" font-size="10.5" font-weight="700" fill="#331F5E" letter-spacing=".6">RELATIVNÍ VLHKOST % RH</text>
+          <text x="632" y="164" text-anchor="end" font-size="10.5" font-weight="700" fill="#008FCD">nejistota od 1,1 % RH</text>
+          <rect x="8" y="172" width="31" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
+          <rect x="39" y="172" width="31" height="12" fill="url(#kal-hx)" stroke="#B4E2F6"/>
+          <rect x="70" y="172" width="531" height="12" fill="#008FCD"/>
+          <rect x="601" y="172" width="31" height="12" fill="url(#kal-nx)" stroke="#E4E8EE"/>
+          <g stroke="#331F5E"><line x1="39" y1="184" x2="39" y2="189"/><line x1="70" y1="184" x2="70" y2="192"/><line x1="195" y1="184" x2="195" y2="189"/><line x1="507" y1="184" x2="507" y2="189"/><line x1="601" y1="184" x2="601" y2="192"/></g>
+          <g font-size="10" font-weight="500" fill="#331F5E" text-anchor="middle"><text x="39" y="203">5</text><text x="72" y="203">10</text><text x="195" y="203">30</text><text x="507" y="203">80</text><text x="601" y="203">95</text></g>
+          <g fill="#FFFFFF" stroke="#008FCD"><rect x="70" y="210" width="125" height="15"/><rect x="195" y="210" width="312" height="15"/><rect x="507" y="210" width="94" height="15"/></g>
+          <g font-size="9.5" font-weight="700" fill="#008FCD" text-anchor="middle"><text x="133" y="221">1,1 % RH</text><text x="351" y="221">1,2 % RH</text><text x="554" y="221">1,8 % RH</text></g>
+          <text x="336" y="235" text-anchor="middle" font-size="8.5" fill="#707070">generátor vlhkosti Rotronic HygroGen 2 · akreditováno při teplotách (10 až 40) °C</text>
+        </g>
+      </svg>
+      <ul class="kal-scalekey">
+        <li><i class="s"></i>v rozsahu akreditace</li>
+        <li><i class="h"></i>kalibrujeme mimo rozsah akreditace</li>
+        <li><i class="n"></i>nekalibrujeme</li>
+      </ul>
+      <ul class="kal-strip">
+        <li>Kalibrační laboratoř č.&nbsp;2432</li>
+        <li>Provedeme i&nbsp;justáž</li>
+        <li>Měřidla dodáváme i&nbsp;servisujeme</li>
+        <li>Kalibrujeme i&nbsp;u&nbsp;vás v&nbsp;provozu</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- § 01 VÝHODY -->
+<section class="kal-section">
+  <div class="container">
+    <p class="kal-eyebrow">Čtyři důvody</p>
+    <h2 class="kal-h2">Proč kalibrovat <span>právě u nás</span></h2>
+    <div class="uk-grid-medium uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+      <div><div class="kal-card">
+        <p class="kal-card__num">01 · Jediný dodavatel</p>
+        <h3 class="kal-h3">Jeden dodavatel pro měřidla, kalibraci i&nbsp;servis</h3>
+        <p>Měřidla teploty a vlhkosti vám dodáme, zkalibrujeme i opravíme — vše pod jednou střechou.</p>
+        <p>Nemusíte tak řešit tři různé dodavatele a dohadovat se, kdo za co odpovídá.</p>
+      </div></div>
+      <div><div class="kal-card">
+        <p class="kal-card__num">02 · Justáž</p>
+        <h3 class="kal-h3">Provádíme i&nbsp;justáž měřidel</h3>
+        <p>Justáž je korekce odchylky zjištěné při měření — pokud to měřidlo umožňuje, můžete si ji u nás objednat.</p>
+        <p>Měřidlo pak seřídíme a zkalibrujeme znovu, vše v jednom průchodu laboratoří, s hodnotami před justáží i po ní na kalibračním listu.</p>
+      </div></div>
+      <div><div class="kal-card">
+        <p class="kal-card__num">03 · Rychlost</p>
+        <h3 class="kal-h3">Rychle, bez ústupků z&nbsp;kvality</h3>
+        <p>Chápeme, že chcete být bez svých měřidel co nejkratší dobu. Rychlost vyřízení proto bereme jako důležitou součást služby kalibrace, samozřejmě při zachování kvality provedení.</p>
+        <p>Vše máme pod jednou střechou, navíc můžeme kalibrovat přímo u vás v provozu.</p>
+      </div></div>
+      <div><div class="kal-card">
+        <p class="kal-card__num">04 · Nejistoty</p>
+        <h3 class="kal-h3">Vynikající nejistoty měření</h3>
+        <p>Nejistota měření udává interval, ve kterém se s vysokou pravděpodobností nachází skutečná hodnota. Čím užší tento interval, tím přesnější informaci o vašem měřidle máte.</p>
+        <p>Naše hodnoty najdete v příloze osvědčení o akreditaci — jsou veřejně dostupné a odpovídají parametrům etalonů a zařízení laboratoře, etalony jsou pravidelně kalibrovány.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- § 02 ROZSAH AKREDITACE (#rozsah) -->
+<section class="kal-section kal-section--blue" id="rozsah">
+  <div class="container">
+    <p class="kal-eyebrow">Rozsah akreditace</p>
+    <h2 class="kal-h2">Rozsah akreditace <span>a nejistoty</span></h2>
+
+    <div class="kal-table-wrap">
+      <table class="kal-table">
+        <caption>Teplota</caption>
+        <thead><tr><th>Předmět kalibrace</th><th>Jmenovitý rozsah</th><th>U (k = 2)</th><th>Princip kalibrace</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="4">Indikační teploměry včetně měřicích řetězců, vyjma skleněných teploměrů<span>Řetězec = čidlo + převodník + indikace; kalibruje se vždy jako celek. Patří sem i záznamníky teploty.</span></td><td class="r">−25 až 140 °C</td><td class="u">0,06 °C</td><td>Porovnání s etalonovým digitálním teploměrem v kapalinové lázni</td></tr>
+          <tr><td class="r">−40 až 0 °C</td><td class="u">0,50 °C</td><td rowspan="3">Porovnání s etalonovým digitálním teploměrem v klimatické komoře</td></tr>
+          <tr><td class="r">0 až 60 °C</td><td class="u">0,13 °C</td></tr>
+          <tr><td class="r">60 až 180 °C</td><td class="u">0,34 °C</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kal-table-wrap">
+      <table class="kal-table">
+        <caption>Relativní vlhkost</caption>
+        <thead><tr><th>Předmět kalibrace</th><th>Jmenovitý rozsah</th><th>Teplota</th><th>U (k = 2)</th><th>Princip kalibrace</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="3">Měřidla relativní vlhkosti vyjma psychrometrů<span>Včetně měřicích řetězců a záznamníků vlhkosti.</span></td><td class="r">10 až 30 % RH</td><td class="r" rowspan="3">10 až 40 °C</td><td class="u">1,1 % RH</td><td rowspan="3">Porovnávací měření s etalonovým vlhkoměrem v generátoru vlhkosti</td></tr>
+          <tr><td class="r">30 až 80 % RH</td><td class="u">1,2 % RH</td></tr>
+          <tr><td class="r">80 až 95 % RH</td><td class="u">1,8 % RH</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="kal-meta">Uvedené hodnoty jsou nejnižší udávané rozšířené nejistoty měření, skutečné nejistoty s ohledem na konkrétní kalibrované měřidlo jsou vždy uvedené na kalibračním listu.</p>
+    <div class="kal-actions">
+      <a href="#" class="button secondary" data-kal-todo="PDF osvědčení">Osvědčení o akreditaci včetně přílohy (PDF)</a>
+    </div>
+    <p class="kal-meta" style="margin-top:2rem">Aktuální rozsah akreditace si můžete kdykoli ověřit v databázi akreditovaných subjektů na <a href="https://www.cai.cz" target="_blank" rel="noopener">www.cai.cz</a>.</p>
+  </div>
+</section>
+
+<!-- § 03 HRANICE ROZSAHU -->
+<section class="kal-section">
+  <div class="container">
+    <p class="kal-eyebrow">Hranice rozsahu</p>
+    <h2 class="kal-h2">Co umíme, <span>ale mimo rozsah akreditace</span></h2>
+    <div class="uk-grid-medium uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+      <div><div class="kal-card kal-card--blue">
+        <p class="kal-card__num">Uděláme, ale mimo rozsah akreditace</p>
+        <ul class="kal-list">
+          <li>Relativní vlhkost (5 až 10) % RH</li>
+          <li>Relativní vlhkost při teplotách mimo (10 až 40) °C</li>
+        </ul>
+        <p>Generátor vlhkosti pracuje od 5 % RH a v širším teplotním rozsahu, než pokrývá akreditace. Napište nám požadavek a řekneme, co je reálné.</p>
+      </div></div>
+      <div><div class="kal-card kal-card--line">
+        <p class="kal-card__num" style="color:#707070">Nekalibrujeme</p>
+        <ul class="kal-list kal-list--x">
+          <li>Relativní vlhkost pod 5 % RH a nad 95 % RH</li>
+          <li>Teploty pod −40 °C a nad +180 °C</li>
+          <li>Termočlánky</li>
+          <li>Skleněné teploměry</li>
+          <li>Psychrometry</li>
+        </ul>
+      </div></div>
+    </div>
+    <p class="kal-meta" style="margin-top:3rem;max-width:94rem">Obsahuje-li zakázka body v rozsahu akreditace i mimo něj, vydáváme jeden kalibrační list, ve kterém jsou hodnoty mimo rozsah akreditace jednoznačně označené. Obsahuje-li zakázka pouze body mimo rozsah akreditace, kalibrační list odkaz na akreditaci neobsahuje.</p>
+    <div class="kal-actions">
+      <a href="#poptavka" class="button secondary" data-uk-scroll data-typ="mimo-akreditaci">Poptat nestandardní kalibraci</a>
+    </div>
+  </div>
+</section>
+
+<!-- § 04 CO KALIBRUJEME -->
+<section class="kal-section kal-section--blue">
+  <div class="container">
+    <p class="kal-eyebrow">Co kalibrujeme</p>
+    <h2 class="kal-h2">Kalibrujeme měřidla <span>všech běžných značek</span></h2>
+    <p class="kal-lead">Nezáleží na tom, jestli jste měřidlo koupili u nás. Kalibrujeme, co potřebujete — od jednoho teploměru po celou flotilu data loggerů.</p>
+    <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" data-uk-grid>
+      <div><div class="kal-card">
+        <div class="kal-card__icon"><img src="assets/icons/mereni_vlhkosti.svg" alt=""></div>
+        <h3 class="kal-h3">Data loggery teploty a&nbsp;vlhkosti</h3>
+        <p class="kal-meta">MadgeTech · Rotronic · Comet · Testo · Ebro · Omega · LogTag</p>
+      </div></div>
+      <div><div class="kal-card">
+        <div class="kal-card__icon"><img src="assets/icons/mereni_teploty.svg" alt=""></div>
+        <h3 class="kal-h3">Digitální teploměry a&nbsp;vlhkoměry</h3>
+        <p class="kal-meta">Rotronic · Vaisala · Kimo · E+E · Comet · Testo</p>
+      </div></div>
+      <div><div class="kal-card">
+        <div class="kal-card__icon"><img src="assets/icons/nejpresnejsi_meridla_na_trhu.svg" alt=""></div>
+        <h3 class="kal-h3">Odporové teploměry</h3>
+        <p>Snímače Pt100 a Pt1000 jako součást měřicího řetězce — čidlo, převodník a indikace. Řetězec kalibrujeme jako celek, aby výsledek odpovídal tomu, co reálně odečítáte.</p>
+      </div></div>
+    </div>
+    <p style="margin-top:4rem">Nenašli jste své měřidlo v naší nabídce? Kontaktujte nás i tak, určitě to nějak vymyslíme.</p>
+    <div class="kal-actions" style="margin-top:0">
+      <a href="#poptavka" class="button" data-uk-scroll data-typ="standardni">Poptat kalibraci mých měřidel</a>
+      <a href="#poptavka" class="button secondary" data-uk-scroll data-typ="dotaz-meridlo" data-poznamka>Moje měřidlo v seznamu není</a>
+    </div>
+  </div>
+</section>
+
+<!-- § 05 JUSTÁŽ -->
+<section class="kal-section">
+  <div class="container">
+    <div class="uk-grid-large" data-uk-grid>
+      <div class="uk-width-1-2@l">
+        <p class="kal-eyebrow">Justáž</p>
+        <h2 class="kal-h2">Provedeme i&nbsp;justáž <span>měřidel</span></h2>
+        <p class="kal-sub">Kalibrace zjistí odchylku, justáž ji opraví.</p>
+        <p>Kalibrace je porovnání měřidla vůči etalonu ve stabilním prostředí — zjistí odchylku měření, ale neopraví ji. Justáž je následná korekce zjištěné odchylky. Pokud to měřidlo umožňuje, můžete si ji u nás objednat.</p>
+        <p>Justáž zvládneme ve stejném průchodu laboratoří — ušetříte druhé kolo přepravy a druhou objednávku. Po justáži měřidlo znovu zkalibrujeme v plném rozsahu, takže dostanete zpátky měřidlo i kalibrační list odpovídající jeho nejlepšímu možnému stavu. V listu uvádíme hodnoty <strong>před justáží (as-found)</strong> i <strong>po justáži (as-left)</strong>.</p>
+        <p>Justáž si můžete objednat rovnou s kalibrací — pak ji provedeme vždy a <strong>za zvýhodněnou cenu</strong>. Zvládneme ji v jednom průchodu laboratoří, bez čekání na vaše rozhodnutí, a měřidlo se k vám vrací rovnou v nejlepším možném stavu.</p>
+        <p>Pokud si ji předem neobjednáte a naměříme odchylku větší, než je vámi sdělená povolená hodnota, nabídneme vám justáž a počkáme na vaše rozhodnutí. V tomto případě za ni platíte plnou cenu.</p>
+      </div>
+      <div class="uk-width-1-2@l">
+        <ol class="kal-steps">
+          <li><h3>Kalibrace</h3><p>Změříme odchylky ve sjednaných bodech. Pokud o justáž nemáte zájem, vydáme kalibrační list a měřidlo se vám vrací.</p></li>
+          <li><h3>Justáž a kalibrace po justáži</h3><p class="kal-meta" style="color:#008FCD;font-weight:700!important;margin-bottom:.6rem!important">Objednané předem za zvýhodněnou cenu, nebo po vašem odsouhlasení</p><p>Měřidlo seřídíme a znovu zkalibrujeme v plném rozsahu. Kalibrační list pak obsahuje hodnoty před justáží i po ní.</p></li>
+        </ol>
+        <div class="kal-ph" style="margin-top:3rem;min-height:26rem">[Graf — odchylka před justáží (as-found) a po ní (as-left), stejné body, reálná anonymizovaná data]</div>
+      </div>
+    </div>
+
+    <div class="kal-card kal-card--blue" style="margin-top:6rem">
+      <h3 class="kal-h3">Výrok o shodě</h3>
+      <p>Kromě justáže si můžete objednat i výrok o shodě — posouzení, zda naměřené odchylky vyhovují odchylce, kterou pro dané měřidlo připouštíte.</p>
+      <p>Podmínkou je, že nám povolenou odchylku sdělíte předem a dohodneme se na rozhodovacím pravidle, podle kterého se shoda posoudí. Použité rozhodovací pravidlo je pak uvedeno přímo v kalibračním listu. Bez předchozí dohody výrok o shodě uvést nelze.</p>
+    </div>
+  </div>
+</section>
+
+<!-- § 06 KALIBRACE NA MÍSTĚ -->
+<section class="kal-section kal-section--violet">
+  <div class="kal-pattern"></div>
+  <div class="container">
+    <div class="uk-grid-large uk-flex-middle" data-uk-grid>
+      <div class="uk-width-1-2@l">
+        <p class="kal-eyebrow">Kalibrace na místě</p>
+        <h2 class="kal-h2">Přijedeme za vámi <span>a zkalibrujeme na počkání</span></h2>
+        <p>Do provozu vozíme kapalinovou lázeň FLUKE 7109A i generátor Rotronic HygroGen 2. Nemusíte tedy nic balit ani posílat a nemusíte se bát o měřidla na cestě — zkalibrujeme je přímo u vás a měřidla se hned vracejí na svá místa.</p>
+        <p>Omezení provozu tím zkrátíte na nezbytné minimum. Odpadá čekání na přepravu tam i zpět a termín znáte předem, takže si výjezd můžete naplánovat na dobu, kdy vám nejméně vadí.</p>
+        <div class="kal-legal"><img src="assets/icons/odrazka.svg" alt="">Kalibrace prováděné mimo prostory laboratoře jsou zahrnuty v rozsahu akreditace Kalibrační laboratoře DATA ELEKTRONIK, č. 2432.</div>
+        <p class="kal-sub" style="color:#FDFDFD;margin-bottom:1.5rem">Kdy to dává smysl</p>
+        <ul class="kal-list">
+          <li style="color:#FDFDFD">Čidla monitorovacího systému RMS</li>
+          <li style="color:#FDFDFD">Kritické měřicí pozice</li>
+          <li style="color:#FDFDFD">Všude, kde měřidla nemůžete nebo nechcete nikam posílat</li>
+        </ul>
+        <p class="kal-meta" style="color:#B4E2F6">Podmínky prostředí měříme při kalibraci u vás vlastním měřidlem, aby byly doložené stejně jako v laboratoři.</p>
+        <div class="kal-actions">
+          <a href="#poptavka" class="button" data-uk-scroll data-misto="provoz">Domluvit kalibraci u nás v provozu</a>
+        </div>
+      </div>
+      <div class="uk-width-1-2@l">
+        <div class="kal-ph" style="min-height:44rem;background:rgba(253,253,253,.06);color:#B4E2F6;border-color:#46B9EB">[Foto — lázeň FLUKE nebo HygroGen 2 v provozu u zákazníka]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- § 07 ETALONY A PROSTŘEDÍ -->
+<section class="kal-section">
+  <div class="container">
+    <p class="kal-eyebrow">Etalony a prostředí</p>
+    <h2 class="kal-h2">Čím <span>kalibrujeme</span></h2>
+    <p class="kal-lead">Do naší laboratoře pečlivě vybíráme každý přístroj tak, abychom dosahovali co nejlepších výsledků a nejistot kalibrací. Každé zařízení je špičkou na trhu.</p>
+    <div class="kal-ph" style="min-height:42rem">[Foto — celá kalibrační laboratoř, reálný záběr pracoviště s technikem při práci]</div>
+
+    <p class="kal-sub" style="margin:6rem 0 3rem">Etalony</p>
+    <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" data-uk-grid>
+      <div><div class="kal-card">
+        <div class="kal-card__media"><div class="kal-ph" style="min-height:0;height:100%;width:100%;border:0;border-radius:0">[Foto]</div></div>
+        <p class="kal-card__num">Etalonový digitální teploměr</p>
+        <h3 class="kal-h3">Isotech milliK se sondou FLUKE 5627A</h3>
+        <p>Velmi přesný teploměr s širokým rozsahem pro precizní kalibrace teploty.</p>
+      </div></div>
+      <div><div class="kal-card">
+        <div class="kal-card__media"><div class="kal-ph" style="min-height:0;height:100%;width:100%;border:0;border-radius:0">[Foto]</div></div>
+        <p class="kal-card__num">Etalonový vlhkoměr v generátoru</p>
+        <h3 class="kal-h3">Digitální sonda Rotronic HC2-S</h3>
+        <p>Zabudovaná přímo do komory generátoru HygroGen 2, takže odečítá hodnotu v místě kalibrovaných měřidel.</p>
+      </div></div>
+      <div><div class="kal-card">
+        <div class="kal-card__media"><img src="assets/img/rotronic-hc2a-s.jpg" alt="Digitální sonda Rotronic HC2A-S" loading="lazy"></div>
+        <p class="kal-card__num">Etalonový externí vlhkoměr</p>
+        <h3 class="kal-h3">Digitální sonda Rotronic HC2A-S s&nbsp;měřidlem HP32</h3>
+        <p>Používaná jako reference v klimatické komoře.</p>
+      </div></div>
+    </div>
+
+    <p class="kal-sub" style="margin:6rem 0 3rem">Prostředí</p>
+    <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" data-uk-grid>
+      <div><div class="kal-card">
+        <div class="kal-card__media"><div class="kal-ph" style="min-height:0;height:100%;width:100%;border:0;border-radius:0">[Foto]</div></div>
+        <p class="kal-card__num">Kapalinová lázeň</p>
+        <h3 class="kal-h3">FLUKE 7109A</h3>
+        <p>Velmi přesné a homogenní teplotní prostředí s nejistotou 0,06 °C v celém rozsahu, ve kterém kalibrujeme všechny ponořitelné teploměry.</p>
+      </div></div>
+      <div><div class="kal-card">
+        <div class="kal-card__media"><img src="assets/img/rotronic-hygrogen2.png" alt="Generátor vlhkosti a teploty Rotronic HygroGen 2" loading="lazy"></div>
+        <p class="kal-card__num">Generátor vlhkosti a teploty</p>
+        <h3 class="kal-h3">Rotronic HygroGen 2</h3>
+        <p>Rychle a stabilně nastaví požadovanou vlhkost i teplotu, a to s velmi dobrou nejistotou. V rozsahu akreditace v něm kalibrujeme vlhkost 10 až 95 % RH při teplotách 10 až 40 °C. Je mobilní — vozíme ho i k vám.</p>
+      </div></div>
+      <div><div class="kal-card">
+        <div class="kal-card__media"><div class="kal-ph" style="min-height:0;height:100%;width:100%;border:0;border-radius:0">[Foto]</div></div>
+        <p class="kal-card__num">Klimatická komora</p>
+        <h3 class="kal-h3">Vötschtechnik</h3>
+        <p>Velkokapacitní teplotně-vlhkostní komora na kalibrace velkých objemů měřidel v širokém teplotním rozsahu.</p>
+      </div></div>
+    </div>
+
+    <div class="kal-card kal-card--blue" style="margin-top:6rem">
+      <div class="uk-grid-medium uk-flex-middle" data-uk-grid>
+        <div class="uk-width-1-2@m">
+          <h3 class="kal-h3">Návaznost</h3>
+          <p>Etalony Kalibrační laboratoře DATA ELEKTRONIK necháváme pravidelně kalibrovat u Českého metrologického institutu. Řetězec metrologické návaznosti na národní etalony je tak nepřetržitý a doložený u každé zakázky.</p>
+        </div>
+        <div class="uk-width-1-2@m">
+          <ol class="kal-steps kal-steps--compact">
+            <li><h3>Národní etalon (ČMI)</h3></li>
+            <li><h3>Naše etalony</h3></li>
+            <li><h3>Vaše měřidlo</h3></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- § 08 ODVĚTVÍ -->
+<section class="kal-section kal-section--blue">
+  <div class="container">
+    <p class="kal-eyebrow">Odvětví</p>
+    <h2 class="kal-h2">Pro koho <span>kalibrujeme</span></h2>
+    <div class="uk-grid-small uk-child-width-1-2@s uk-child-width-1-4@l uk-grid-match" data-uk-grid>
+      <div><div class="kal-industry"><h3>Farmacie a distribuce léčiv</h3><p>Výroba, laboratoře, sklady, stabilitní komory, lednice a mrazničky, monitorovací systémy, GxP prostředí.</p></div></div>
+      <div><div class="kal-industry"><h3>Zdravotnictví a nemocnice</h3><p>Lékárny, nemocnice, výroba a sterilizace zdravotnických prostředků, skladování léčiv a vzorků.</p></div></div>
+      <div><div class="kal-industry"><h3>Potravinářství</h3><p>HACCP, IFS, BRC, chladicí řetězec, výrobní a skladovací prostory, prodejny, vodní aktivita.</p></div></div>
+      <div><div class="kal-industry"><h3>Automotive a strojírenství</h3><p>IATF 16949 a řízení měřidel, klimatické zkušebny, výrobní a skladovací prostory.</p></div></div>
+      <div><div class="kal-industry"><h3>Zkušební a kalibrační laboratoře</h3><p>Zajištění metrologické návaznosti vašich měřidel pro vlastní akreditaci podle ČSN EN ISO/IEC 17025:2018. Nabízíme také možnost srovnávacího měření mezi vaší a naší laboratoří.</p></div></div>
+      <div><div class="kal-industry"><h3>Meteorologie</h3><p>Teplotní a vlhkostní sondy, monitorování meteorologických podmínek.</p></div></div>
+      <div><div class="kal-industry"><h3>Papírenský průmysl</h3><p>Měřidla pro kontrolu vlhkosti papírenských výrobků.</p></div></div>
+      <div><div class="kal-industry"><h3>HVAC</h3><p>Kalibrace čidel teploty a vlhkosti ve vzduchotechnice, klimatizačních a chladicích systémech.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- § 09 PRŮBĚH ZAKÁZKY -->
+<section class="kal-section">
+  <div class="container kal-narrow">
+    <p class="kal-eyebrow">Průběh zakázky</p>
+    <h2 class="kal-h2">Jak to <span>probíhá</span></h2>
+    <ol class="kal-steps">
+      <li><h3>Poptávka</h3><p>Napište typ měřidla, počet kusů a body, ve kterých chcete kalibrovat. Nevíte, které body? Navrhneme je — nejběžnější je kalibrace ve třech bodech: dolní mez, střed a horní mez vašeho rozsahu.</p></li>
+      <li><h3>Nabídka a objednávka</h3><p>Pošleme nabídku s cenou, termínem, kalibračními body a rozsahem služby. Po jejím potvrzení máte termín rezervovaný.</p></li>
+      <li><h3>Doručení měřidel</h3><p>Máte tři možnosti: pošlete je na naši adresu, přivezete osobně, nebo si u nás objednáte svoz. Kurýr PPL pak přijede na vámi zvolenou adresu i s přepravní etiketou — nemusíte mít smluvního přepravce ani nic tisknout, stačí mít zásilku připravenou. Jak měřidla zabalit, jsme sepsali do krátkého <a href="#" data-kal-todo="PDF návod k přepravě">návodu</a>. U kalibrace ve vašem provozu tento krok odpadá.</p></li>
+      <li><h3>Kalibrace</h3><p>V termínu, který jsme vám potvrdili v nabídce.</p></li>
+      <li><h3>Justáž a finální kalibrace</h3><p>Objednali jste justáž předem? Provedeme ji vždy a za zvýhodněnou cenu. Neobjednali a naměříme odchylku větší, než je vámi sdělená povolená hodnota? Ozveme se a počkáme na vaše rozhodnutí. Po justáži vždy následuje ověřovací finální kalibrace, jejíž výsledky najdete v kalibračním listu jako hodnoty po justáži (as-left).</p></li>
+      <li><h3>Kalibrační list a měřidlo zpět</h3><p>Kalibrační list vydáváme tištěný, s podpisem vedoucího laboratoře. Měřidlo označíme kalibračním štítkem s datem provedené kalibrace.</p></li>
+      <li><h3>Připomenutí rekalibrace</h3><p>Řeknete-li nám, jakou platnost kalibrace u měřidla uplatňujete, termín ohlídáme a ozveme se šest týdnů před další kalibrací.</p></li>
+    </ol>
+    <div class="kal-actions" style="margin-top:5rem">
+      <a href="#poptavka" class="button" data-uk-scroll data-typ="standardni">Poptat kalibraci</a>
+    </div>
+  </div>
+</section>
+
+<!-- § 10 DLOUHODOBÝ KALIBRAČNÍ PLÁN -->
+<section class="kal-section kal-section--blue">
+  <div class="container">
+    <p class="kal-eyebrow">Dlouhodobý kalibrační plán</p>
+    <h2 class="kal-h2">Nejlepší způsob spolupráce: <span>dlouhodobý kalibrační plán</span></h2>
+    <p class="kal-lead">Máte více měřidel a chcete mít dlouhodobou jistotu jejich přesnosti a spolehlivosti? Domluvme se na delší období dopředu. Obě strany pak vědí, co se kdy bude dít — vy si podle toho můžete plánovat provoz, my kapacitu laboratoře.</p>
+    <div class="uk-grid-medium uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+      <div><div class="kal-card">
+        <p class="kal-card__num">Výhody pro vás</p>
+        <ul class="kal-list">
+          <li>Termíny domluvené dopředu.<span>Víte, kdy které měřidlo přijde na řadu, a máte na ten den rezervovanou kapacitu.</span></li>
+          <li>Předvídatelnost.<span>Kalibrace přestane být něco, co je potřeba narychlo vyřešit, a stane se položkou v plánu.</span></li>
+          <li>Příští kalibrace vám neuteče.<span>Hlídáme termín za vás a ozveme se s předstihem šesti týdnů.</span></li>
+          <li>Rámcová objednávka místo opakované duplicitní komunikace.<span>Podmínky a rozsah řešíte jednou za období, ne u každého měřidla zvlášť.</span></li>
+          <li>Při větším množství měřidel zajímavější podmínky.<span>Domluvíme se individuálně.</span></li>
+        </ul>
+      </div></div>
+      <div><div class="kal-card">
+        <p class="kal-card__num">Jak se domluvíme</p>
+        <ol class="kal-steps kal-steps--compact">
+          <li><h3>Projdeme seznam měřidel</h3><p>Bezplatně a nezávazně.</p></li>
+          <li><h3>Navrhneme plán</h3><p>Které měřidlo kdy, v kolika bodech a kde — v laboratoři nebo u vás.</p></li>
+          <li><h3>Pošleme nezávaznou cenovou nabídku</h3><p>Transparentní, se všemi potřebnými informacemi — položka po položce, ať víte přesně, za co platíte. Nic se z ní nedozvíte až na faktuře.</p></li>
+          <li><h3>Rezervujeme kapacitu</h3><p>Termíny zapíšeme na celé období dopředu.</p></li>
+        </ol>
+      </div></div>
+    </div>
+    <p style="margin-top:4rem;max-width:94rem">Každý zákazník a jeho potřeby jsou pro nás jedinečné a uděláme vše proto, abychom se dokázali přizpůsobit vašim představám a požadavkům. Kalibrace mají být rutinní záležitost, ne náročný projekt.</p>
+    <div class="kal-actions" style="margin-top:0">
+      <a href="#poptavka" class="button" data-uk-scroll data-typ="dlouhodoby-plan">Domluvit dlouhodobý plán</a>
+    </div>
+  </div>
+</section>
+
+<!-- § 11 ZAHRANIČÍ -->
+<section class="kal-section kal-section--violet">
+  <div class="kal-pattern"></div>
+  <div class="container kal-narrow">
+    <p class="kal-eyebrow">Zahraničí</p>
+    <h2 class="kal-h2">Kalibrujeme i&nbsp;pro zákazníky <span>ze zahraničí</span></h2>
+    <p>Kalibrační listy vydáváme v rozsahu akreditace Kalibrační laboratoře DATA ELEKTRONIK, č. 2432, udělené Českým institutem pro akreditaci podle ČSN EN ISO/IEC 17025:2018. Jde o mezinárodně uznávanou normu, podle které se posuzují kalibrační laboratoře po celém světě.</p>
+    <p>Měřidla nám doručte na naši adresu v Brně; po kalibraci vám zajistíme přepravu zpět.</p>
+    <ul class="kal-strip" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+      <li>Komunikujeme česky a&nbsp;anglicky</li>
+      <li>Doklady v&nbsp;češtině i&nbsp;angličtině</li>
+      <li>Přepravu zpět zajistíme</li>
+    </ul>
+    <div class="kal-actions">
+      <a href="#poptavka" class="button white" data-uk-scroll data-typ="zahranici">Poptávka ze zahraničí</a>
+    </div>
+  </div>
+</section>
+
+<!-- § 12 FAQ (rozbalovací, výchozí stav zavřený; schema.org/FAQPage je v <head>) -->
+<section class="kal-section">
+  <div class="container kal-narrow">
+    <p class="kal-eyebrow">Časté dotazy</p>
+    <h2 class="kal-h2">Na co se ptáte <span>nejčastěji</span></h2>
+    <ul class="kal-faq" data-uk-accordion="collapsible: true">
+      <li><a class="uk-accordion-title" href="#">Nabízíte i neakreditovanou kalibraci?</a><div class="uk-accordion-content">
+        <p>V rozsahu naší akreditace ne. Co umíme akreditovaně, děláme akreditovaně — nemusíte tak řešit, kterou variantu si objednat, ani to obhajovat před auditorem. Neakreditovaně kalibrujeme jen to, na co akreditace nedosahuje: relativní vlhkost (5 až 10) % RH, vlhkost při teplotách mimo (10 až 40) °C či jiné veličiny, například proudovou smyčku nebo CO₂. I u nich dokládáme metrologickou návaznost etalonů, jen kalibrační list neobsahuje odkaz na akreditaci.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Dosud jste nám kalibrovali neakreditovaně. Co se mění?</a><div class="uk-accordion-content">
+        <p>Laboratoř, přístroje i lidé zůstávají stejní. Nově dostanete kalibrační list s odkazem na akreditaci, tedy doklad, který posoudil Český institut pro akreditaci a který obstojí u auditu.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Co znamená nejistota měření (k = 2) a proč je důležitá?</a><div class="uk-accordion-content">
+        <p>Žádné měření není absolutně přesné. Nejistota udává interval, ve kterém se s vysokou pravděpodobností nachází skutečná hodnota. Písmeno k je koeficient rozšíření; k = 2 odpovídá pravděpodobnosti pokrytí přibližně 95 %.</p>
+        <p>Prakticky to znamená toto: pokud naměříme 20,00 °C s nejistotou 0,06 °C, skutečná hodnota leží s 95% pravděpodobností mezi 19,94 a 20,06 °C.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Kterou nejistotu u svého měřidla dostanu?</a><div class="uk-accordion-content">
+        <p>U teploty rozhoduje především to, jestli lze teploměr ponořit. Ponořitelné teploměry kalibrujeme v kapalinové lázni, kde je nejistota nejnižší — od 0,06 °C. Pokud měřidlo ponořit nelze, přednostně použijeme generátor vlhkosti; kalibrace je rychlejší a nejistota lepší než v klimatické komoře. Rozměrná měřidla a body mimo rozsah generátoru kalibrujeme v klimatické komoře.</p>
+        <p>U vlhkosti je nejnižší udávaná nejistota 1,1 % RH; podle pásma vlhkosti pak 1,2 nebo 1,8 % RH, jak uvádí příloha osvědčení o akreditaci.</p>
+        <p>Všechny hodnoty v tabulce rozsahu jsou nejnižší udávané. Skutečná nejistota konkrétní kalibrace závisí i na vlastnostech vašeho měřidla a je vždy uvedena v kalibračním listu.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Co znamená, že je kalibrace akreditovaná?</a><div class="uk-accordion-content">
+        <p>Že nezávislá třetí strana posoudila naše metody, etalony, podmínky prostředí, výpočty nejistot i způsobilost pracovníků a potvrdila, že v uvedeném rozsahu měříme tak, jak deklarujeme. Akreditace se pravidelně dozoruje, není to jednorázové razítko. Kalibrační list s odkazem na akreditaci proto obstojí tam, kde po vás někdo chce doložit, že kalibraci provedla způsobilá laboratoř.</p>
+        <p>Metrologická návaznost je něco jiného — je to nepřetržitý řetězec kalibrací až k národnímu etalonu. Dokládáme ji u každé zakázky bez ohledu na akreditaci — naše etalony si pravidelně necháváme kalibrovat.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Platí kalibrační list z české laboratoře i v zahraničí?</a><div class="uk-accordion-content">
+        <p>Kalibrujeme podle ČSN EN ISO/IEC 17025:2018, což je mezinárodně uznávaná norma, podle které se posuzují kalibrační laboratoře po celém světě.</p>
+        <p>Pokud po vás váš auditor vyžaduje konkrétní doklad o vzájemném uznávání, ozvěte se nám předem a projdeme to s vámi.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Jak k vám mohu měřidla poslat?</a><div class="uk-accordion-content">
+        <p>Máte tři možnosti. Pošlete je na naši adresu v Brně, přivezete je osobně, nebo si u nás objednáte svoz — kurýr PPL pak přijede na vámi zvolenou adresu i s přepravní etiketou. Nemusíte tak mít vlastního smluvního přepravce ani nic tisknout, stačí mít zásilku připravenou. Svoz účtujeme jako přepravné tam i zpět.</p>
+        <p>Než balíček vypravíte, dejte nám prosím vědět — potvrdíme vám termín a budeme s vaší zásilkou počítat.</p>
+        <p>Jak měřidla zabalit, aby cestu přežila, jsme sepsali do krátkého <a href="#" data-kal-todo="PDF návod k přepravě">návodu ke stažení</a>.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Můžu měřidla prostě poslat nebo dovézt bez domluvy a avíza?</a><div class="uk-accordion-content">
+        <p>Vyžadujeme transparentní domluvu předem. Postup je vždy stejný: poptávka kalibrace → naše nabídka → vaše objednávka → doručení měřidel. Díky tomu můžeme lépe plánovat kapacity laboratoře a zajistit co nejrychlejší vyřízení zakázky.</p>
+        <p>Pokud měřidla dodáte bez předchozí domluvy, počítejte s delší dobou vyřízení — a podle rozhodnutí vedoucího laboratoře i s tím, že zakázku nemusíme přijmout vůbec.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Jak často se má měřidlo kalibrovat?</a><div class="uk-accordion-content">
+        <p>Platnost kalibrace si stanovuje uživatel měřidla, ne laboratoř — proto na kalibračním štítku uvádíme datum provedené kalibrace, nikoli datum té příští. Nejběžnější je jeden rok, ale záleží na tom, jak je měřidlo namáhané, jak přesné výsledky potřebujete a co po vás žádá váš systém kvality nebo auditor.</p>
+        <p>Řekněte nám v poptávce, jak dlouhou platnost kalibrace u svých měřidel uplatňujete, a termín příští kalibrace ohlídáme za vás — ozveme se šest týdnů předem.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">V kolika bodech nechat měřidlo kalibrovat?</a><div class="uk-accordion-content">
+        <p>Nejběžnější je kalibrace ve třech bodech: dolní mez, střed a horní mez rozsahu, ve kterém měřidlo skutečně používáte. Není nutné pokrývat celý rozsah měřidla — smysl má kalibrovat tam, kde měříte.</p>
+        <p>Nevíte, které body zvolit? Nechte pole v poptávce prázdné, zeptáme se na váš provoz a body navrhneme.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Kalibrujete vlhkost i mimo teplotu (10 až 40) °C?</a><div class="uk-accordion-content">
+        <p>Ano, generátor vlhkosti pracuje v širším teplotním rozsahu. Taková kalibrace ale není předmětem akreditace, takže kalibrační list neobsahuje odkaz na akreditaci. Metrologickou návaznost etalonů dokládáme i u ní.</p>
+        <p>Pokud potřebujete akreditovaný doklad a vaše měřidlo pracuje například v chladicím boxu, ozvěte se — projdeme spolu, jestli lze kalibrační body zvolit tak, aby do rozsahu akreditace spadly.</p>
+      </div></li>
+      <li><a class="uk-accordion-title" href="#">Kalibrujete jen čidlo, nebo celý měřicí řetězec?</a><div class="uk-accordion-content">
+        <p>Měřicí řetězec kalibrujeme jako celek — čidlo, převodník i indikaci. Jinak by výsledek neodpovídal tomu, co na displeji reálně odečítáte, protože odchylku vnáší každý článek řetězce. Posílejte nám proto sestavu pohromadě, včetně kabeláže a indikační jednotky.</p>
+        <p>Výjimkou jsou digitální sondy, například Rotronic. Ty kalibrujeme i samostatně, protože měřená hodnota vzniká přímo v sondě. Případnou justáž navíc uložíme rovnou do sondy, takže si korekci nese s sebou i po přepojení k jiné jednotce.</p>
+      </div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- § 13 DŮVĚRA -->
+<section class="kal-section kal-section--blue">
+  <div class="container">
+    <p class="kal-eyebrow">Důvěra</p>
+    <h2 class="kal-h2">Komu <span>kalibrujeme</span></h2>
+    <p class="kal-lead">Kalibrujeme pro výrobce léčiv a zdravotnických prostředků, potravinářské provozy, univerzity i průmyslové firmy.</p>
+    <!-- Pás log: monochromaticky, 2 řady po 8. Doplnit soubory log. -->
+    <ul class="kal-logos">
+      <li>Mölnlycke</li><li>Philip Morris</li><li>HARTMANN-RICO</li><li>HELI FOOD</li><li>Krahulík</li><li>Reprofit</li><li>MEDIPO</li><li>Medac</li>
+      <li>EMBA</li><li>Mondi</li><li>Cerealis</li><li>Fresenius Kabi</li><li>MU Polička</li><li>Masarykova univerzita</li><li>HERBADENT</li><li>BLOCK SVP</li>
+    </ul>
+    <div class="uk-grid-medium uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+      <div><div class="kal-quote"><div class="kal-pattern"></div>
+        <p><span class="kal-fill">[Citace zákazníka — ideálně z farmacie nebo zdravotnictví, o kalibraci a rekalibraci data loggerů]</span></p>
+        <p class="kal-quote__who"><span class="kal-fill">[Jméno, pozice, firma]</span></p>
+      </div></div>
+      <div><div class="kal-quote"><div class="kal-pattern"></div>
+        <p><span class="kal-fill">[Citace zákazníka — ideálně o kalibraci v provozu nebo o justáži]</span></p>
+        <p class="kal-quote__who"><span class="kal-fill">[Jméno, pozice, firma]</span></p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- § 14 POPTÁVKA (#poptavka) — jediný formulář na stránce, rozšiřuje section.formPack -->
+<section class="formPack kal-form" id="poptavka">
+  <div class="container">
+    <div class="uk-grid-large" data-uk-grid>
+      <div class="uk-width-3-5@l">
+        <div class="formPanel">
+          <p class="title">Nezávazná poptávka</p>
+          <h2>Řekněte nám, co potřebujete zkalibrovat</h2>
+          <p class="subtitle">Odpovíme do jednoho pracovního dne. Nabídka je nezávazná.</p>
+          <form id="kal-poptavka-form" action="#" method="post" novalidate>
+            <div class="uk-grid-small" data-uk-grid>
+              <div class="uk-width-1-1"><div class="kal-field">
+                <label class="kal-label" for="kal-typ">Typ požadavku *</label>
+                <select id="kal-typ" name="typ" required>
+                  <option value="standardni">Standardní kalibrace</option>
+                  <option value="mimo-akreditaci">Kalibrace mimo rozsah akreditace</option>
+                  <option value="dotaz-meridlo">Dotaz na měřidlo, které v seznamu není</option>
+                  <option value="dlouhodoby-plan">Dlouhodobý kalibrační plán</option>
+                  <option value="zahranici">Poptávka ze zahraničí</option>
+                </select>
+              </div></div>
+              <div class="uk-width-2-3@m"><div class="kal-field">
+                <label class="kal-label" for="kal-meridlo">Typ a značka měřidla *</label>
+                <input class="kal-input" id="kal-meridlo" name="meridlo" type="text" required>
+              </div></div>
+              <div class="uk-width-1-3@m"><div class="kal-field">
+                <label class="kal-label" for="kal-kusy">Počet kusů *</label>
+                <input class="kal-input" id="kal-kusy" name="kusy" type="number" min="1" inputmode="numeric" required>
+              </div></div>
+              <div class="uk-width-1-1"><div class="kal-field" role="radiogroup" aria-labelledby="kal-velicina-l">
+                <p class="kal-label" id="kal-velicina-l">Kalibrovat teplotu, nebo teplotu i vlhkost? *</p>
+                <div class="kal-choices">
+                  <label><input type="radio" name="velicina" value="teplota" required><span>Teplotu</span></label>
+                  <label><input type="radio" name="velicina" value="teplota-vlhkost"><span>Teplotu i vlhkost</span></label>
+                </div>
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field">
+                <label class="kal-label" for="kal-body">Požadované kalibrační body</label>
+                <input class="kal-input" id="kal-body" name="body" type="text">
+                <p class="kal-hint">Nevíte? Nechte prázdné, domluvíme se s vámi a poradíme.</p>
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field">
+                <label class="kal-label" for="kal-platnost">Platnost kalibrace, kterou uplatňujete</label>
+                <input class="kal-input" id="kal-platnost" name="platnost" type="text" placeholder="např. 12 měsíců">
+                <p class="kal-hint">Abychom vám mohli hlídat příští kalibraci.</p>
+              </div></div>
+              <div class="uk-width-1-1"><div class="kal-field" role="radiogroup" aria-labelledby="kal-justaz-l">
+                <p class="kal-label" id="kal-justaz-l">Justáž</p>
+                <div class="kal-choices">
+                  <label><input type="radio" name="justaz" value="objednat"><span>Objednat rovnou (zvýhodněná cena)</span></label>
+                  <label><input type="radio" name="justaz" value="pri-odchylce" checked><span>Nabídnout při odchylce</span></label>
+                  <label><input type="radio" name="justaz" value="ne"><span>Ne</span></label>
+                </div>
+              </div></div>
+              <div class="uk-width-1-1"><div class="kal-field" role="radiogroup" aria-labelledby="kal-shoda-l">
+                <p class="kal-label" id="kal-shoda-l">Výrok o shodě <button type="button" class="kal-info" aria-expanded="false" aria-controls="kal-shoda-info" aria-label="Co je výrok o shodě">i</button></p>
+                <div class="kal-info-text" id="kal-shoda-info" hidden>Posouzení, zda naměřené odchylky vyhovují odchylce, kterou pro měřidlo připouštíte. Uvádíme ho na kalibrační list na vyžádání. Podmínkou je, že nám povolenou odchylku sdělíte předem a dohodneme se na rozhodovacím pravidle.</div>
+                <div class="kal-choices">
+                  <label><input type="radio" name="shoda" value="ano"><span>Ano</span></label>
+                  <label><input type="radio" name="shoda" value="ne" checked><span>Ne</span></label>
+                </div>
+              </div></div>
+              <div class="uk-width-1-1" id="kal-odchylka" hidden><div class="kal-field kal-conditional">
+                <label class="kal-label" for="kal-odchylka-txt">Povolená odchylka pro teplotu, resp. vlhkost *</label>
+                <textarea class="kal-input" id="kal-odchylka-txt" name="odchylka" rows="2"></textarea>
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field" role="radiogroup" aria-labelledby="kal-misto-l">
+                <p class="kal-label" id="kal-misto-l">Kde kalibrovat?</p>
+                <div class="kal-choices">
+                  <label><input type="radio" name="misto" value="laborator" checked><span>V laboratoři</span></label>
+                  <label><input type="radio" name="misto" value="provoz"><span>U nás v provozu</span></label>
+                </div>
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field">
+                <label class="kal-label" for="kal-doprava">Doprava měřidel</label>
+                <select id="kal-doprava" name="doprava">
+                  <option value="posle">Pošlu sám</option>
+                  <option value="osobne">Přivezu osobně</option>
+                  <option value="svoz">Chci objednat svoz z mé adresy</option>
+                </select>
+              </div></div>
+              <div class="uk-width-1-1"><div class="kal-field">
+                <label class="kal-label" for="kal-termin">Preferovaný termín vyřízení <button type="button" class="kal-info" aria-expanded="false" aria-controls="kal-termin-info" aria-label="K termínu vyřízení">i</button></label>
+                <div class="kal-info-text" id="kal-termin-info" hidden>Skutečný termín se bude odvíjet od kapacity laboratoře a domluvy s kalibračním technikem.</div>
+                <input class="kal-input" id="kal-termin" name="termin" type="text">
+              </div></div>
+              <div class="uk-width-1-1"><div class="kal-field">
+                <label class="kal-label" for="kal-poznamka">Poznámka</label>
+                <textarea class="kal-input" id="kal-poznamka" name="poznamka"></textarea>
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field">
+                <label class="kal-label" for="kal-jmeno">Jméno a příjmení *</label>
+                <input class="kal-input" id="kal-jmeno" name="jmeno" type="text" autocomplete="name" required>
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field">
+                <label class="kal-label" for="kal-firma">Firma</label>
+                <input class="kal-input" id="kal-firma" name="firma" type="text" autocomplete="organization">
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field">
+                <label class="kal-label" for="kal-email">E-mail *</label>
+                <input class="kal-input" id="kal-email" name="email" type="email" autocomplete="email" required>
+              </div></div>
+              <div class="uk-width-1-2@m"><div class="kal-field">
+                <label class="kal-label" for="kal-telefon">Telefon *</label>
+                <input class="kal-input" id="kal-telefon" name="telefon" type="tel" autocomplete="tel" required>
+              </div></div>
+              <div class="uk-width-1-3@m">
+                <div class="submitPack"><input type="submit" class="button" value="Odeslat poptávku"></div>
+              </div>
+              <div class="uk-width-2-3@m fx fxa">
+                <p class="inf">Ozveme se nejpozději následující pracovní den</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="uk-width-2-5@l">
+        <div class="kal-contact">
+          <p class="kal-eyebrow">Nebo rovnou</p>
+          <h3>Vedoucí kalibrační laboratoře</h3>
+          <div class="kal-ph">[Foto — konkrétní člověk, ne ilustrace]</div>
+          <p><strong style="color:#FDFDFD"><span class="kal-fill">[Jméno]</span></strong><br>
+            <span class="kal-fill">[telefon]</span><br>
+            <a href="mailto:laborator@datel.cz">laborator@datel.cz</a></p>
+          <p>Laboratoř: Jugoslávská 669/113,<br>Černá Pole, 613 00 Brno</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
