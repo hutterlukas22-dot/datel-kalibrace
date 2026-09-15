@@ -11,6 +11,7 @@ Hlavička, patička, písmo, tlačítka a formulářová sekce jsou **1:1 z prod
 | `src/obsah.html` | obsah mezi hlavičku a patičku šablony stránky |
 | `src/head.html` | title, description, canonical, `noindex` a strukturovaná data (JSON-LD) do `<head>` |
 | `assets/css/kalibrace.css` | přidat za hlavní CSS webu — všechny třídy mají předponu `.kal-`, nic z webu nepřepisují |
+| `assets/css/datel-font-fix.css` | **globálně na celý web** — 14 prvků (claim v hlavičce a patičce, nadpisy menu v patičce, vyhledávání) web dnes sází písmem Inter; soubor je převádí na firemní Satoshi |
 | `assets/js/kalibrace.js` | přidat za hlavní JS webu (UIkit je už na webu) |
 | `assets/img/*`, `assets/icons/*` | obrázky a ikony — cesty v HTML/CSS upravit podle úložiště webu |
 

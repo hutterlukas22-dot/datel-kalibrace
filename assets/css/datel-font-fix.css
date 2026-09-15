@@ -1,0 +1,16 @@
+/* Oprava písma pro celý web: prvky, které web sází písmem Inter (claim v hlavičce a patičce,
+   placeholder vyhledávání, drobné texty), převádí na firemní Satoshi. Na produkci přidat globálně. */
+.searchPopUp .container .middle .searchPack input[type="search"]{font-family:'Satoshi',sans-serif!important}
+.searchPopUp .container .middle .searchPack input[type="search"]::-webkit-input-placeholder{font-family:'Satoshi',sans-serif!important}
+.searchPopUp .container .middle .searchPack input[type="search"]::-moz-placeholder{font-family:'Satoshi',sans-serif!important}
+.searchPopUp .container .middle .searchPack input[type="search"]:-ms-input-placeholder{font-family:'Satoshi',sans-serif!important}
+.searchPopUp .container .middle .searchPack input[type="search"]:-moz-placeholder{font-family:'Satoshi',sans-serif!important}
+section.mainBar .container .mainPack .uk-grid>div .logoPack .claim{font-family:'Satoshi',sans-serif!important}
+section.mainBar .container .mainPack .uk-grid>div .top form input[type="search"]{font-family:'Satoshi',sans-serif!important}
+section.mainBar .container .mainPack .uk-grid>div .top form input[type="search"]::-webkit-input-placeholder{font-family:'Satoshi',sans-serif!important}
+section.mainBar .container .mainPack .uk-grid>div .top form input[type="search"]::-moz-placeholder{font-family:'Satoshi',sans-serif!important}
+section.mainBar .container .mainPack .uk-grid>div .top form input[type="search"]:-ms-input-placeholder{font-family:'Satoshi',sans-serif!important}
+section.mainBar .container .mainPack .uk-grid>div .top form input[type="search"]:-moz-placeholder{font-family:'Satoshi',sans-serif!important}
+section.footer .container .content .top .uk-grid>div .logoPack .claim{font-family:'Satoshi',sans-serif!important}
+section.footer .container .content .top .uk-grid>div .footerMenu h3{font-family:'Satoshi',sans-serif!important}
+section.numberMenu .container .uk-grid>div .numberBox>span{font-family:'Satoshi',sans-serif!important}
