@@ -267,7 +267,15 @@ section.formPack.kal-form .container:before{background:url(../img/pattern.svg) r
 .kal-person img{display:block;width:100%;height:auto}
 @media (min-width:1200px){
   section.formPack.kal-form{overflow:clip}
-  .kal-form .kal-sticky{position:sticky;top:12rem}
+  /* postava zajede za modrou linku: kontejner ořízne vše pod ní, nohy vidět jen na velmi vysokém monitoru */
+  section.formPack.kal-form .container{overflow:clip}
+  .kal-form .kal-sticky{position:sticky;top:12rem;z-index:1}
+  /* fotka visí z přilepeného bloku dolů (neovlivňuje jeho výšku) — na konci sekce blok dojede k lince
+     a postava za ní zajede zhruba v pase */
+  /* blok je vysoký jako okno pod hlavičkou; postava stojí u jeho spodní hrany a nohy visí pod ní.
+     Při scrollu jsou nohy pod okrajem okna, na konci sekce zajede postava za modrou linku v pase. */
+  .kal-form .kal-sticky{padding-right:24rem;min-height:min(calc(100vh - 21rem),80rem);box-sizing:border-box}
+  .kal-form .kal-person{position:absolute;top:auto;bottom:0;right:-8rem;width:38rem;margin:0;transform:translateY(45%)}
 }
 @media (max-width:1199px){
   .kal-person{display:none}
