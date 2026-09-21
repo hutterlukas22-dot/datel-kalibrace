@@ -27,6 +27,7 @@
     if (!a) return;
     setValue('typ', a.getAttribute('data-typ'));
     setValue('misto', a.getAttribute('data-misto'));
+    setValue('shoda', a.getAttribute('data-shoda'));
     if (a.hasAttribute('data-poznamka')) {
       var note = form.elements.poznamka;
       if (note) setTimeout(function () { note.focus({ preventScroll: true }); }, 700);

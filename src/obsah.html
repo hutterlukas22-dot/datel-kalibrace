@@ -19,14 +19,17 @@
       </ul>
       <div class="text">
         <div class="kal-hero-mark">
-          <div class="kal-hero-mark__logo" title="Doplnit značku ČIA, až bude přidělená">[ZNAČKA ČIA]<br>AK 2432</div>
+          <div class="kal-hero-mark__logos">
+            <span class="kal-hero-mark__logo"><img src="assets/img/znacky/cia-k2432.png" alt="Kalibrační značka ČIA – akreditovaná kalibrační laboratoř K 2432" width="400" height="364"></span>
+            <span class="kal-hero-mark__logo kal-hero-mark__logo--wide"><img src="assets/img/znacky/global-aci.png" alt="Global ACI" width="667" height="381"></span>
+          </div>
           <p class="kal-hero-mark__txt"><strong>Kalibrační laboratoř DATA ELEKTRONIK</strong>Kalibrační laboratoř č. 2432 akreditovaná ČIA podle ČSN EN ISO/IEC 17025:2018</p>
         </div>
         <h1>Akreditovaná kalibrace <span>a justáž teploměrů a vlhkoměrů</span></h1>
         <p class="kal-hero__lead">Kalibrujeme teplotu v rozsahu (−40 až +180) °C a relativní vlhkost (10 až 95) % RH. V laboratoři v Brně i přímo u vás v provozu. Pro provozy, kde na přesnosti opravdu záleží.</p>
         <div class="kal-actions">
           <a href="#poptavka" class="button" data-uk-scroll data-typ="standardni">Nezávazně poptat kalibraci</a>
-          <a href="#rozsah" class="button white" data-uk-scroll>Rozsah akreditace a nejistoty</a>
+          <a href="#" class="button white" target="_blank" rel="noopener" data-kal-todo="PDF osvědčení">Osvědčení o akreditaci včetně přílohy (PDF)</a>
         </div>
       </div>
     </div>
@@ -41,7 +44,7 @@
       <!-- Rozsah akreditace v kostce — responzivní osa (pozice v %: teplota zobrazena −70 až +210 °C, vlhkost 0 až 100 % RH).
            Hodnoty z CMC (příloha osvědčení o akreditaci). -->
       <div class="kal-axes">
-        <div class="kal-axis">
+        <div class="kal-axis kal-axis--t">
           <div class="kal-axis__summary">
             <p class="kal-axis__label">Teplota</p>
             <p class="kal-axis__range">−40 až +180 <small>°C</small></p>
@@ -56,7 +59,7 @@
             <div class="kal-axis__lane"><b class="" style="left:10.714%;width:14.286%"><span>0,50 °C</span></b><b class="" style="left:25%;width:21.429%"><span>0,13 °C</span></b><b class="" style="left:46.429%;width:42.857%"><span>0,34 °C</span></b></div>
           </div>
         </div>
-        <div class="kal-axis">
+        <div class="kal-axis kal-axis--rh">
           <div class="kal-axis__summary">
             <p class="kal-axis__label">Relativní vlhkost</p>
             <p class="kal-axis__range">10 až 95 <small>% RH</small></p>
@@ -120,77 +123,6 @@
   </div>
 </section>
 
-<!-- § 02 ROZSAH AKREDITACE (#rozsah) -->
-<section class="kal-section kal-section--blue" id="rozsah">
-  <div class="container">
-    <p class="kal-eyebrow">Rozsah akreditace</p>
-    <h2 class="kal-h2">Rozsah akreditace <span>a nejistoty</span></h2>
-
-    <div class="kal-table-wrap">
-      <table class="kal-table">
-        <caption><span class="kal-table__cap"><img src="assets/icons/mereni_teploty.svg" alt="">Teplota</span></caption>
-        <thead><tr><th>Předmět kalibrace</th><th>Jmenovitý rozsah</th><th>U (k = 2)</th><th>Princip kalibrace</th></tr></thead>
-        <tbody>
-          <tr><td rowspan="4" class="kal-table__item">Indikační teploměry včetně měřicích řetězců, vyjma skleněných teploměrů<span>Řetězec = čidlo + převodník + indikace; kalibruje se vždy jako celek. Patří sem i záznamníky teploty.</span></td><td class="r">−25 až 140 °C</td><td class="u">0,06 °C</td><td>Porovnání s etalonovým digitálním teploměrem v kapalinové lázni</td></tr>
-          <tr><td class="r">−40 až 0 °C</td><td class="u">0,50 °C</td><td rowspan="3">Porovnání s etalonovým digitálním teploměrem v klimatické komoře</td></tr>
-          <tr><td class="r">0 až 60 °C</td><td class="u">0,13 °C</td></tr>
-          <tr><td class="r">60 až 180 °C</td><td class="u">0,34 °C</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="kal-table-wrap">
-      <table class="kal-table">
-        <caption><span class="kal-table__cap"><img src="assets/icons/mereni_vlhkosti.svg" alt="">Relativní vlhkost</span></caption>
-        <thead><tr><th>Předmět kalibrace</th><th>Jmenovitý rozsah</th><th>Teplota</th><th>U (k = 2)</th><th>Princip kalibrace</th></tr></thead>
-        <tbody>
-          <tr><td rowspan="3" class="kal-table__item">Měřidla relativní vlhkosti vyjma psychrometrů<span>Včetně měřicích řetězců a záznamníků vlhkosti.</span></td><td class="r">10 až 30 % RH</td><td class="r" rowspan="3">10 až 40 °C</td><td class="u">1,1 % RH</td><td rowspan="3">Porovnávací měření s etalonovým vlhkoměrem v generátoru vlhkosti</td></tr>
-          <tr><td class="r">30 až 80 % RH</td><td class="u">1,2 % RH</td></tr>
-          <tr><td class="r">80 až 95 % RH</td><td class="u">1,8 % RH</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="kal-meta">Uvedené hodnoty jsou nejnižší udávané rozšířené nejistoty měření, skutečné nejistoty s ohledem na konkrétní kalibrované měřidlo jsou vždy uvedené na kalibračním listu.</p>
-    <div class="kal-actions">
-      <a href="#" class="button secondary" data-kal-todo="PDF osvědčení">Osvědčení o akreditaci včetně přílohy (PDF)</a>
-    </div>
-    <p class="kal-meta" style="margin-top:2rem">Aktuální rozsah akreditace si můžete kdykoli ověřit v databázi akreditovaných subjektů na <a href="https://www.cai.cz" target="_blank" rel="noopener">www.cai.cz</a>.</p>
-  </div>
-</section>
-
-<!-- § 03 HRANICE ROZSAHU -->
-<section class="kal-section">
-  <div class="container">
-    <p class="kal-eyebrow">Hranice rozsahu</p>
-    <h2 class="kal-h2">Co umíme, <span>ale mimo rozsah akreditace</span></h2>
-    <div class="uk-grid-medium uk-child-width-1-2@m uk-grid-match" data-uk-grid>
-      <div><div class="kal-card kal-card--blue">
-        <p class="kal-card__num">Uděláme, ale mimo rozsah akreditace</p>
-        <ul class="kal-list">
-          <li>Relativní vlhkost (5 až 10) % RH</li>
-          <li>Relativní vlhkost při teplotách mimo (10 až 40) °C</li>
-        </ul>
-        <p>Generátor vlhkosti pracuje od 5 % RH a v širším teplotním rozsahu, než pokrývá akreditace. Napište nám požadavek a řekneme, co je reálné.</p>
-      </div></div>
-      <div><div class="kal-card kal-card--line">
-        <p class="kal-card__num" style="color:#707070">Nekalibrujeme</p>
-        <ul class="kal-list kal-list--x">
-          <li>Relativní vlhkost pod 5 % RH a nad 95 % RH</li>
-          <li>Teploty pod −40 °C a nad +180 °C</li>
-          <li>Termočlánky</li>
-          <li>Skleněné teploměry</li>
-          <li>Psychrometry</li>
-        </ul>
-      </div></div>
-    </div>
-    <p class="kal-meta" style="margin-top:3rem;max-width:94rem">Obsahuje-li zakázka body v rozsahu akreditace i mimo něj, vydáváme jeden kalibrační list, ve kterém jsou hodnoty mimo rozsah akreditace jednoznačně označené. Obsahuje-li zakázka pouze body mimo rozsah akreditace, kalibrační list odkaz na akreditaci neobsahuje.</p>
-    <div class="kal-actions">
-      <a href="#poptavka" class="button secondary" data-uk-scroll data-typ="mimo-akreditaci">Poptat nestandardní kalibraci</a>
-    </div>
-  </div>
-</section>
-
 <!-- § 04 CO KALIBRUJEME -->
 <section class="kal-section kal-section--blue">
   <div class="container">
@@ -199,17 +131,32 @@
     <p class="kal-lead">Nezáleží na tom, jestli jste měřidlo koupili u nás. Kalibrujeme, co potřebujete — od jednoho teploměru po celou flotilu data loggerů.</p>
     <div class="uk-grid-medium uk-child-width-1-3@m uk-grid-match" data-uk-grid>
       <div><div class="kal-card">
-        <div class="kal-card__icon"><img src="assets/icons/mereni_vlhkosti.svg" alt=""></div>
+        <div class="kal-card__icon"><!-- nahradit novou ikonou: data logger (silueta HITEMP140) --><img src="assets/icons/mereni_vlhkosti.svg" alt=""></div>
         <h3 class="kal-h3">Data loggery teploty a&nbsp;vlhkosti</h3>
-        <p class="kal-meta">MadgeTech · Rotronic · Comet · Testo · Ebro · Omega · LogTag</p>
+        <ul class="kal-brands" aria-label="Kalibrujeme mimo jiné měřidla značek">
+          <li><img src="assets/img/vyrobci/madgetech.png" alt="MadgeTech" width="354" height="68" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/rotronic.png" alt="Rotronic" width="200" height="103" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/comet.png" alt="Comet" width="315" height="120" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/testo.png" alt="Testo" width="120" height="120" loading="lazy" class="is-square"></li>
+          <li><img src="assets/img/vyrobci/ebro.png" alt="Ebro" width="285" height="120" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/omega.png" alt="Omega" width="126" height="120" loading="lazy" class="is-square"></li>
+          <li><img src="assets/img/vyrobci/logtag.png" alt="LogTag" width="360" height="95" loading="lazy"></li>
+        </ul>
       </div></div>
       <div><div class="kal-card">
-        <div class="kal-card__icon"><img src="assets/icons/mereni_teploty.svg" alt=""></div>
+        <div class="kal-card__icon"><!-- nahradit novou ikonou: digitální teploměr/vlhkoměr (silueta HP32, displej 34.71 %RH / 21.73 °C) --><img src="assets/icons/mereni_teploty.svg" alt=""></div>
         <h3 class="kal-h3">Digitální teploměry a&nbsp;vlhkoměry</h3>
-        <p class="kal-meta">Rotronic · Vaisala · Kimo · E+E · Comet · Testo</p>
+        <ul class="kal-brands" aria-label="Kalibrujeme mimo jiné měřidla značek">
+          <li><img src="assets/img/vyrobci/rotronic.png" alt="Rotronic" width="200" height="103" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/vaisala.png" alt="Vaisala" width="334" height="94" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/kimo.png" alt="Kimo" width="302" height="120" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/ee.png" alt="E+E Elektronik" width="269" height="120" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/comet.png" alt="Comet" width="315" height="120" loading="lazy"></li>
+          <li><img src="assets/img/vyrobci/testo.png" alt="Testo" width="120" height="120" loading="lazy" class="is-square"></li>
+        </ul>
       </div></div>
       <div><div class="kal-card">
-        <div class="kal-card__icon"><img src="assets/icons/nejpresnejsi_meridla_na_trhu.svg" alt=""></div>
+        <div class="kal-card__icon"><!-- nahradit novou ikonou: odporový teploměr (silueta Omega PRTXD, displej 120.0 °C) --><img src="assets/icons/nejpresnejsi_meridla_na_trhu.svg" alt=""></div>
         <h3 class="kal-h3">Odporové teploměry</h3>
         <p>Snímače Pt100 a Pt1000 jako součást měřicího řetězce — čidlo, převodník a indikace. Řetězec kalibrujeme jako celek, aby výsledek odpovídal tomu, co reálně odečítáte.</p>
       </div></div>
@@ -244,10 +191,19 @@
       </div>
     </div>
 
-    <div class="kal-card kal-card--blue" style="margin-top:6rem">
-      <h3 class="kal-h3">Výrok o shodě</h3>
-      <p>Kromě justáže si můžete objednat i výrok o shodě — posouzení, zda naměřené odchylky vyhovují odchylce, kterou pro dané měřidlo připouštíte.</p>
-      <p>Podmínkou je, že nám povolenou odchylku sdělíte předem a dohodneme se na rozhodovacím pravidle, podle kterého se shoda posoudí. Použité rozhodovací pravidlo je pak uvedeno přímo v kalibračním listu. Bez předchozí dohody výrok o shodě uvést nelze.</p>
+    <div class="kal-verdict">
+      <div class="kal-pattern"></div>
+      <div class="uk-grid-medium uk-flex-bottom" data-uk-grid>
+        <div class="uk-width-1-2@m">
+          <p class="kal-eyebrow">Doplňková služba</p>
+          <h3 class="kal-verdict__h">Výrok o shodě <span>se specifikací</span></h3>
+          <p>Kromě justáže si můžete objednat i výrok o shodě — posouzení, zda naměřené odchylky vyhovují odchylce, kterou pro dané měřidlo připouštíte.</p>
+        </div>
+        <div class="uk-width-1-2@m">
+          <p>Podmínkou je, že nám povolenou odchylku sdělíte předem a dohodneme se na rozhodovacím pravidle, podle kterého se shoda posoudí. Použité rozhodovací pravidlo je pak uvedeno přímo v kalibračním listu. <strong>Bez předchozí dohody výrok o shodě uvést nelze.</strong></p>
+          <div class="kal-actions"><a href="#poptavka" class="button white" data-uk-scroll data-typ="standardni" data-shoda="ano">Poptat kalibraci s výrokem o shodě</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -358,22 +314,6 @@
         <p>Velkokapacitní teplotně-vlhkostní komora na kalibrace velkých objemů měřidel v širokém teplotním rozsahu.</p>
       </div></div>
     </div>
-
-    <div class="kal-card kal-card--blue" style="margin-top:6rem">
-      <div class="uk-grid-medium uk-flex-middle" data-uk-grid>
-        <div class="uk-width-1-2@m">
-          <h3 class="kal-h3">Návaznost</h3>
-          <p>Etalony Kalibrační laboratoře DATA ELEKTRONIK necháváme pravidelně kalibrovat u Českého metrologického institutu. Řetězec metrologické návaznosti na národní etalony je tak nepřetržitý a doložený u každé zakázky.</p>
-        </div>
-        <div class="uk-width-1-2@m">
-          <ol class="kal-steps kal-steps--compact">
-            <li><h3>Národní etalon (ČMI)</h3></li>
-            <li><h3>Naše etalony</h3></li>
-            <li><h3>Vaše měřidlo</h3></li>
-          </ol>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -450,20 +390,31 @@
 </section>
 
 <!-- § 11 ZAHRANIČÍ -->
-<section class="kal-section kal-section--violet">
+<section class="kal-section kal-section--violet kal-abroad">
   <div class="kal-pattern"></div>
-  <div class="container kal-narrow">
-    <p class="kal-eyebrow">Zahraničí</p>
-    <h2 class="kal-h2">Kalibrujeme i&nbsp;pro zákazníky <span>ze zahraničí</span></h2>
-    <p>Kalibrační listy vydáváme v rozsahu akreditace Kalibrační laboratoře DATA ELEKTRONIK, č. 2432, udělené Českým institutem pro akreditaci podle ČSN EN ISO/IEC 17025:2018. Jde o mezinárodně uznávanou normu, podle které se posuzují kalibrační laboratoře po celém světě.</p>
-    <p>Měřidla nám doručte na naši adresu v Brně; po kalibraci vám zajistíme přepravu zpět.</p>
-    <ul class="kal-strip" style="grid-template-columns:repeat(3,minmax(0,1fr))">
-      <li>Komunikujeme česky a&nbsp;anglicky</li>
-      <li>Doklady v&nbsp;češtině i&nbsp;angličtině</li>
-      <li>Přepravu zpět zajistíme</li>
-    </ul>
-    <div class="kal-actions">
-      <a href="#poptavka" class="button white" data-uk-scroll data-typ="zahranici">Poptávka ze zahraničí</a>
+  <div class="container">
+    <div class="uk-grid-large uk-flex-middle" data-uk-grid>
+      <div class="uk-width-3-5@l">
+        <p class="kal-eyebrow">Zahraničí</p>
+        <h2 class="kal-h2">Kalibrujeme i&nbsp;pro zákazníky <span>ze zahraničí</span></h2>
+        <p>Kalibrační listy vydáváme v rozsahu akreditace Kalibrační laboratoře DATA ELEKTRONIK, č. 2432, udělené Českým institutem pro akreditaci podle ČSN EN ISO/IEC 17025:2018. Jde o mezinárodně uznávanou normu, podle které se posuzují kalibrační laboratoře po celém světě.</p>
+        <p>Měřidla nám doručte na naši adresu v Brně; po kalibraci vám zajistíme přepravu zpět.</p>
+        <ul class="kal-strip kal-strip--3">
+          <li>Komunikujeme česky a&nbsp;anglicky</li>
+          <li>Doklady v&nbsp;češtině i&nbsp;angličtině</li>
+          <li>Přepravu zpět zajistíme</li>
+        </ul>
+        <div class="kal-actions">
+          <a href="#poptavka" class="button white" data-uk-scroll data-typ="zahranici">Poptávka ze zahraničí</a>
+        </div>
+      </div>
+      <div class="uk-width-2-5@l">
+        <!-- Značka Global ACI v kruhu dvanácti hvězd z vlajky EU -->
+        <div class="kal-abroad__visual">
+          <svg class="kal-abroad__stars" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><defs><polygon id="kal-eu-star" points="0,-25 5.61,-7.73 23.78,-7.73 9.08,2.95 14.69,20.23 0,9.55 -14.69,20.23 -9.08,2.95 -23.78,-7.73 -5.61,-7.73"/></defs><use href="#kal-eu-star" x="200" y="50"/><use href="#kal-eu-star" x="275" y="70.1"/><use href="#kal-eu-star" x="329.9" y="125"/><use href="#kal-eu-star" x="350" y="200"/><use href="#kal-eu-star" x="329.9" y="275"/><use href="#kal-eu-star" x="275" y="329.9"/><use href="#kal-eu-star" x="200" y="350"/><use href="#kal-eu-star" x="125" y="329.9"/><use href="#kal-eu-star" x="70.1" y="275"/><use href="#kal-eu-star" x="50" y="200"/><use href="#kal-eu-star" x="70.1" y="125"/><use href="#kal-eu-star" x="125" y="70.1"/></svg>
+          <div class="kal-abroad__card"><img src="assets/img/znacky/global-aci.png" alt="Global ACI" width="667" height="381" loading="lazy"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -635,10 +586,10 @@
                 <label class="kal-label" for="kal-telefon">Telefon *</label>
                 <input class="kal-input" id="kal-telefon" name="telefon" type="tel" autocomplete="tel" required>
               </div></div>
-              <div class="uk-width-1-3@m">
+              <div class="uk-width-2-5@m">
                 <div class="submitPack"><input type="submit" class="button" value="Odeslat poptávku"></div>
               </div>
-              <div class="uk-width-2-3@m fx fxa">
+              <div class="uk-width-3-5@m fx fxa">
                 <p class="inf">Ozveme se nejpozději následující pracovní den</p>
               </div>
             </div>
@@ -668,8 +619,8 @@
           <picture><img loading="lazy" src="assets/site/tIcon.png" alt="contact icon"></picture>
           <p class="end">Rádi se s vámi sejdeme i online na platformě MS Teams</p>
         </div>
-          <picture class="kal-person uk-visible@l">
-            <img loading="lazy" src="assets/img/tomas-pokorny-cely.png" alt="Ing. Tomáš Pokorný" title="Ing. Tomáš Pokorný">
+          <picture class="kal-person">
+            <img loading="lazy" src="assets/img/tomas-pokorny.png" alt="Ing. Tomáš Pokorný" title="Ing. Tomáš Pokorný" width="560" height="745">
           </picture>
         </div>
       </div>

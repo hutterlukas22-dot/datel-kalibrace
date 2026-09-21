@@ -25,9 +25,12 @@ Hlavička, patička, písmo, tlačítka a formulářová sekce jsou **1:1 z prod
 - FAQ je nativní UIkit `uk-accordion`, výchozí stav zavřený; `schema.org/FAQPage` je v `head.html`.
 - Mřížky jsou UIkit (`uk-grid`, `uk-child-width-*`), zlomy shodné s webem (640 / 960 / 1200 px).
 - Brand: štítek s linkou, nadpisy H2 fialová + modrá, rohy `0 2rem 0 2rem`, pattern na fialové 50 %.
-- Tabulky mají jednotný styl DATEL pro web i tisk (design system, Komponenty → Tabulky): hlavička `#B4E2F6`
-  s tučným šedým textem, bílé tělo, mřížka 1 px `#9D9D9D` včetně rámu, hranaté rohy, bez zebry.
-  Web dnes podbarvuje sudé řádky všech tabulek (`table tbody tr:nth-child(2n)`) — `.kal-table` to ruší.
+- Značky ČIA (K 2432) a Global ACI jsou v `assets/img/znacky/`, loga výrobců v `assets/img/vyrobci/`
+  (ořezaná, zmenšená). Loga výrobců jsou monochromatická, barva se ukáže při najetí myší.
+- Osa „Rozsah akreditace v kostce“: teplota červeně, vlhkost modře (modifikátory `.kal-axis--t` / `.kal-axis--rh`).
+- Kontakt u formuláře: původní portrét z webu, pod ním linka; na desktopu jede s formulářem (sticky).
+  Sekce má `overflow:clip` místo webového `overflow:hidden`, jinak sticky nefunguje.
+- Kdyby na stránku přibyla tabulka, platí jednotný styl DATEL z design systemu (Komponenty → Tabulky).
 
 ## Tlačítka a formulář (#poptavka)
 
@@ -38,6 +41,7 @@ předvyplní pole a pošlou událost `kalibrace_cta` do `dataLayer`:
 |---|---|---|
 | `data-typ` | Typ požadavku (`typ`) | `standardni`, `mimo-akreditaci`, `dotaz-meridlo`, `dlouhodoby-plan`, `zahranici` |
 | `data-misto` | Kde kalibrovat (`misto`) | `laborator`, `provoz` |
+| `data-shoda` | Výrok o shodě (`shoda`) | `ano`, `ne` |
 | `data-poznamka` | zaměří pole Poznámka | — |
 
 Formulář zatím nikam neodesílá (`action="#"`) — napojit na stávající zpracování formulářů webu (Nette).
@@ -47,13 +51,12 @@ Výrok o shodě = ANO zobrazí povinné pole s povolenou odchylkou. Ikony „i�
 
 Zástupný obsah je na stránce vidět (přerušovaný modrý rámeček `.kal-ph`, žluté `.kal-fill`):
 
-- značka ČIA v hero (až bude přidělená)
-- PDF osvědčení o akreditaci a PDF návod k přepravě (odkazy `data-kal-todo`)
+- PDF osvědčení o akreditaci včetně přílohy (tlačítko v úvodu) a PDF návod k přepravě (odkazy `data-kal-todo`)
+- tři nové ikony v sekci „Kalibrujeme měřidla všech běžných značek“ (data logger, digitální teploměr/vlhkoměr,
+  odporový teploměr) — místa jsou v HTML označená komentářem, zatím tam jsou stávající ikony
 - graf as-found / as-left v sekci Justáž
-- fotky: kalibrace u zákazníka, celá laboratoř, Isotech milliK + FLUKE 5627A, sonda HC2-S, lázeň FLUKE 7109A, komora Vötschtechnik
-- loga zákazníků (2 řady po 8), dvě citace zákazníků
-- jméno, telefon a fotka vedoucího laboratoře
-- odstranit `noindex` z `head.html`, až bude akreditační značka přidělená
+- fotky: kalibrace u zákazníka, Isotech milliK + FLUKE 5627A, sonda HC2-S, lázeň FLUKE 7109A, komora Vötschtechnik
+- odstranit `noindex` z `head.html` při spuštění
 
 ## Náhled lokálně
 
