@@ -67,8 +67,8 @@ Náhled proto používá lokální náhrady — **na produkci nic z toho neplat�
 - obrázky z `/www/upload/` → `assets/site/upload/<id>.<přípona>`; `build.mjs` je v `index.html` přesměruje,
   `src/obsah.html` zůstává s produkčními adresami. Loga dodavatelů jsou z podkladů klienta, fotky v rozbalovacím
   menu jsou jen zástupné.
-- chybí loga 9 zákazníků v sekci referencí — stačí je uložit do `assets/site/upload/` pod id z jejich adresy
-  (build vypíše, která id nemají náhradu).
+- loga 9 zákazníků v sekci referencí jsou stažená z datel.cz (200 × 120 px). Nový obrázek z `/www/upload/`
+  stačí uložit do `assets/site/upload/` pod id z jeho adresy (build vypíše, která id nemají náhradu).
 
 ## Náhled lokálně
 
