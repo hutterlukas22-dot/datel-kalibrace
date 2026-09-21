@@ -52,15 +52,14 @@ Výrok o shodě = ANO zobrazí povinné pole s povolenou odchylkou. Ikony „i�
 Zástupný obsah je na stránce vidět (přerušovaný modrý rámeček `.kal-ph`, žluté `.kal-fill`):
 
 - PDF osvědčení o akreditaci včetně přílohy (tlačítko v úvodu) a PDF návod k přepravě (odkazy `data-kal-todo`)
-- tři nové ikony v sekci „Kalibrujeme měřidla všech běžných značek“ (data logger, digitální teploměr/vlhkoměr,
-  odporový teploměr) — místa jsou v HTML označená komentářem, zatím tam jsou stávající ikony
 - graf as-found / as-left v sekci Justáž
 - fotky: kalibrace u zákazníka, Isotech milliK + FLUKE 5627A, sonda HC2-S, lázeň FLUKE 7109A, komora Vötschtechnik
 - odstranit `noindex` z `head.html` při spuštění
 
 ## Grafika z datel.cz v náhledu
 
-Web datel.cz je za ochranou WEDOS a obrázky z něj se na cizí stránce (GitHub Pages, localhost) nenačtou.
+Web datel.cz je za ochranou WEDOS: obrázky pouští jen prohlížeči, který už web navštívil a prošel ověřením.
+Návštěvník, který otevře náhled (GitHub Pages) poprvé, by je neviděl — ověřeno 21. 9. 2026 v čistém Chromu.
 Náhled proto používá lokální náhrady — **na produkci nic z toho neplatí, tam fungují původní adresy**:
 
 - pravítka a pattern v převzatém CSS webu → brand SVG (`assets/img/ruler-l.svg`, `ruler-r.svg`, `pattern.svg`);
