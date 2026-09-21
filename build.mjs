@@ -1,6 +1,6 @@
 // Sestaví náhledovou stránku: hlavička a patička 1:1 z datel.cz + obsah nové podstránky.
 // Programátor přebírá jen src/obsah.html, assets/css/kalibrace.css, assets/js/kalibrace.js a assets/img|icons.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 
 const header = readFileSync('_src/header.abs.html', 'utf8');
 const footer = readFileSync('_src/footer.abs.html', 'utf8');
@@ -26,5 +26,16 @@ ${footer}
 </body>
 </html>
 `;
-writeFileSync('index.html', html);
+// Náhled mimo datel.cz: web je za ochranou WEDOS a obrázky z něj se na cizí stránce nenačtou.
+// Obrázky z /www/upload/, které mají lokální náhradu v assets/site/upload/<id>.<přípona>, se v náhledu přesměrují
+// (a jejich <source> webp se vynechá). Obsah pro programátora (src/obsah.html) zůstává s produkčními adresami.
+const up = Object.fromEntries(readdirSync('assets/site/upload').map((f) => [f.replace(/\.[^.]+$/, ''), 'assets/site/upload/' + f]));
+const preview = html
+  .replace(/<source[^>]*https:\/\/www\.datel\.cz\/www\/upload\/[^/]+\/(\d+)\/[^>]*>/g, (m, id) => (up[id] ? '' : m))
+  .replace(/https:\/\/www\.datel\.cz\/www\/upload\/[^/]+\/(\d+)\/[^"\s)]*/g, (m, id) => up[id] || m)
+  .replace(/<link rel="icon" type="image\/png"[^>]*>/, '<link rel="icon" type="image/svg+xml" href="assets/img/logo/datel-symbol.svg">');
+const missing = [...new Set([...preview.matchAll(/https:\/\/www\.datel\.cz\/www\/upload\/[^/]+\/(\d+)\//g)].map((m) => m[1]))];
+if (missing.length) console.log('bez lokální náhrady (' + missing.length + '):', missing.join(' '));
+
+writeFileSync('index.html', preview);
 console.log('index.html', html.length, 'B');

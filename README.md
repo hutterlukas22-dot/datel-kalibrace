@@ -58,6 +58,19 @@ Zástupný obsah je na stránce vidět (přerušovaný modrý rámeček `.kal-ph
 - fotky: kalibrace u zákazníka, Isotech milliK + FLUKE 5627A, sonda HC2-S, lázeň FLUKE 7109A, komora Vötschtechnik
 - odstranit `noindex` z `head.html` při spuštění
 
+## Grafika z datel.cz v náhledu
+
+Web datel.cz je za ochranou WEDOS a obrázky z něj se na cizí stránce (GitHub Pages, localhost) nenačtou.
+Náhled proto používá lokální náhrady — **na produkci nic z toho neplatí, tam fungují původní adresy**:
+
+- pravítka a pattern v převzatém CSS webu → brand SVG (`assets/img/ruler-l.svg`, `ruler-r.svg`, `pattern.svg`);
+  `kalibrace.css` používá pravítka z `assets/img/` i na produkci (je to brand asset, stejný motiv jako PNG webu)
+- obrázky z `/www/upload/` → `assets/site/upload/<id>.<přípona>`; `build.mjs` je v `index.html` přesměruje,
+  `src/obsah.html` zůstává s produkčními adresami. Loga dodavatelů jsou z podkladů klienta, fotky v rozbalovacím
+  menu jsou jen zástupné.
+- chybí loga 9 zákazníků v sekci referencí — stačí je uložit do `assets/site/upload/` pod id z jejich adresy
+  (build vypíše, která id nemají náhradu).
+
 ## Náhled lokálně
 
 ```bash

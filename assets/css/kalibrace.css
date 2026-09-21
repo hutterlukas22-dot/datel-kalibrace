@@ -12,9 +12,10 @@
 .kal-section--tight{padding:6rem 0}
 .kal-section--blue{background:#DAF1FB}
 .kal-section--violet{background:#331F5E;overflow:hidden}
-.kal-section--violet:before,.kal-section--violet:after{content:"";position:absolute;bottom:0;width:3.7rem;height:100%;background:url(https://www.datel.cz/www/frontend/images/rulerL.png) repeat-y;background-size:contain;z-index:2;opacity:.5}
+/* pravítka: brand SVG z Brand_assety (levé), pravé zrcadlově */
+.kal-section--violet:before,.kal-section--violet:after{content:"";position:absolute;bottom:0;width:3.7rem;height:100%;background:url(../img/ruler-l.svg) repeat-y;background-size:contain;z-index:2;opacity:.5}
 .kal-section--violet:before{left:0}
-.kal-section--violet:after{right:0;background-image:url(https://www.datel.cz/www/frontend/images/rulerR.png)}
+.kal-section--violet:after{right:0;background-image:url(../img/ruler-r.svg)}
 .kal-section .container{position:relative;z-index:3}
 .kal-narrow{max-width:94rem}
 
@@ -74,6 +75,17 @@ section.pageTop.kal-hero .con .container .text p.kal-hero__lead{min-height:0;mar
 section.pageTop.kal-hero .con .container .text p.kal-hero-mark__txt{flex:1 1 30rem;min-height:0;margin:0;font:400 1.6rem/2.5rem 'Satoshi';color:#E4E4E4}
 .kal-hero-mark__txt strong{display:block;font-size:1.9rem;line-height:2.7rem;color:#FDFDFD;margin-bottom:.4rem}
 .kal-hero .kal-actions{margin-top:3.5rem}
+/* Fotka v úvodu: web ji vkládá celou (contain) a fialový přechod má napevno pro jiný formát obrázku,
+   takže u naší fotky vykoukl její levý okraj jako světlý pruh. Fotka je proto přichycená vpravo v plné výšce
+   a do fialové se rozpouští vlastní maskou; webový přechod se nepoužije.
+   Textový sloupec je širší, aby se obě tlačítka vešla vedle sebe; odstavec drží původní šířku. */
+@media (min-width:1200px){
+  section.pageTop.smaller.kal-hero .con>picture:before{display:none}
+  section.pageTop.smaller.kal-hero .con>picture img{position:absolute;top:0;right:0;left:auto;width:auto;max-width:none;height:100%;object-fit:cover;-webkit-mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 25%,#000 55%);mask-image:linear-gradient(to right,transparent 0,rgba(0,0,0,.55) 25%,#000 55%)}
+  section.pageTop.kal-hero .con .container .text{max-width:82rem}
+  section.pageTop.kal-hero .con .container .text p.kal-hero__lead{max-width:68rem}
+  .kal-hero .kal-actions{flex-wrap:nowrap}
+}
 
 /* rozsah — karta přesahující hero */
 .kal-scope{position:relative;z-index:8;margin-top:-12rem}
