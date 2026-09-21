@@ -324,9 +324,11 @@ section.formPack.kal-form .container:after{content:none}
 @media (min-width:960px){
   .kal-form p.inf{padding-left:2.4rem}
 }
-/* zelený podklad pod tlačítkem na šířku tlačítka (web má pevných 16,5rem, delší text tlačítka z něj přečníval) */
-section.formPack.kal-form .container .uk-grid>div .formPanel form .uk-grid>div .submitPack{display:inline-block}
-section.formPack.kal-form .container .uk-grid>div .formPanel form .uk-grid>div .submitPack:before{width:calc(100% - 1rem)}
+/* průhledný zelený rámeček rovnoměrně kolem celého tlačítka
+   (web má pevný posunutý podklad 16,5rem, delší text tlačítka z něj vpravo přečníval) */
+section.formPack.kal-form .container .uk-grid>div .formPanel form .uk-grid>div .submitPack{display:inline-block;padding:.8rem}
+section.formPack.kal-form .container .uk-grid>div .formPanel form .uk-grid>div .submitPack:before{left:0;top:0;width:100%;height:100%}
+section.formPack.kal-form .container .uk-grid>div .formPanel form .uk-grid>div .submitPack input[type="submit"]{display:block;width:auto}
 
 /* pravítka ve formuláři přes celou výšku sekce */
 section.formPack.kal-form:before,section.formPack.kal-form:after{height:100%;background-repeat:repeat-y}
