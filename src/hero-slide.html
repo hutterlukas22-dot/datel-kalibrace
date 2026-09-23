@@ -1,0 +1,57 @@
+<!-- =====================================================================
+     TEASER KALIBRACE — slide do hero carouselu na homepage.
+     Vložit jako další <li> do <ul class="uk-slideshow-items"> v section.slideshow.
+     Potřebuje: assets/css/hero-slide.css, značky v assets/img/znacky/ a ikony v assets/icons/.
+     Všechny nové třídy mají předponu .kalt- — nic z webu nepřepisují.
+     ===================================================================== -->
+<li>
+  <div class="slide kalt-slide">
+    <div class="uk-grid-small" data-uk-grid>
+      <div class="uk-width-2-5@l fx fxa">
+        <div class="text">
+          <p class="label">DATA ELEKTRONIK, spol. s r.o.</p>
+          <h2>Akreditovaná kalibrace <span>teploměrů a vlhkoměrů</span></h2>
+          <p>Kalibrační laboratoř č. 2432 akreditovaná Českým institutem pro akreditaci podle ČSN EN ISO/IEC 17025:2018. Kalibrujeme teplotu a vlhkost v laboratoři v Brně i přímo u vás v provozu<span class="kalt__more"> &mdash; a rovnou provedeme i justáž měřidel</span>.</p>
+          <p class="buttons">
+            <a class="button secondary" href="/kalibrace-a-justaz-meridel">Zjistit více o kalibraci</a>
+            <a class="button" href="/kalibrace-a-justaz-meridel#poptavka">Nezávazně poptat</a>
+          </p>
+        </div>
+      </div>
+      <div class="uk-width-3-5@l kalt-col">
+        <div class="kalt">
+          <div class="kalt__glow" aria-hidden="true"></div>
+
+          <!-- rozsah akreditace: teplota červeně, vlhkost modře (pozice v %: teplota −70 až +210 °C, vlhkost 0 až 100 % RH) -->
+          <div class="kalt__scales">
+            <div class="kalt__scale kalt__scale--t">
+              <p class="kalt__lbl"><img src="assets/icons/mereni_teploty.svg" alt="" width="24" height="24">Teplota</p>
+              <p class="kalt__val">−40 až +180 <small>°C</small></p>
+              <div class="kalt__track"><i style="left:10.7%;width:78.6%"></i></div>
+              <div class="kalt__ticks"><span style="left:10.7%">−40</span><span style="left:25%">0</span><span style="left:46.4%">60</span><span style="left:89.3%">+180</span></div>
+            </div>
+            <div class="kalt__scale kalt__scale--rh">
+              <p class="kalt__lbl"><img src="assets/icons/mereni_vlhkosti.svg" alt="" width="24" height="24">Relativní vlhkost</p>
+              <p class="kalt__val">10 až 95 <small>% RH</small></p>
+              <div class="kalt__track"><i style="left:10%;width:85%"></i></div>
+              <div class="kalt__ticks"><span style="left:10%">10</span><span style="left:30%">30</span><span style="left:80%">80</span><span style="left:95%">95</span></div>
+            </div>
+          </div>
+
+          <!-- čárkovaná spojnice k nejistotě, stejný prvek jako na ostatních slidech -->
+          <p class="kalt__chip">nejistota od <strong>0,06 °C</strong></p>
+          <!-- kompaktní varianty pro užší obrazovky (slide má na webu pevnou výšku) -->
+          <p class="kalt__u">nejistota od <strong>0,06 °C</strong></p>
+          <p class="kalt__compact"><span>−40 až +180 °C</span><span>10 až 95 % RH</span><span>nejistota od 0,06 °C</span></p>
+
+          <p class="kalt__cap">Akreditovaná kalibrační laboratoř č. 2432</p>
+          <div class="kalt__marks">
+            <span class="kalt__mark"><img src="assets/img/znacky/cia-k2432.png" alt="Značka ČIA, kalibrační laboratoř K 2432" width="400" height="364"></span>
+            <span class="kalt__mark kalt__mark--wide"><img src="assets/img/znacky/global-aci.png" alt="Global ACI" width="667" height="381"></span>
+            <span class="kalt__norm">ČSN EN ISO/IEC<b>17025:2018</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

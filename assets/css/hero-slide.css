@@ -1,0 +1,84 @@
+/* =====================================================================
+   Teaser kalibrace — slide hero carouselu na homepage.
+   Drží jazyk ostatních slidů: fialová s texturou, dvoubarevný nadpis,
+   plovoucí kompozice se svitem, čárkovaná spojnice, rámeček se značkami.
+   Barvy: teplota #FF5C61 (červená značky projasněná pro fialový podklad),
+          vlhkost #46B9EB · text #FDFDFD · značky na bílých dlaždicích.
+   Rohy: vždy 0 2rem 0 2rem (štítky a dlaždice 0 1rem 0 1rem).
+   ===================================================================== */
+.kalt-col{display:flex;align-items:center}
+.kalt{position:relative;box-sizing:border-box;width:100%;max-width:74rem;margin-left:4%;font-family:'Satoshi',sans-serif}
+.kalt__glow{position:absolute;left:-8%;top:-6%;width:86%;height:78%;pointer-events:none;background:radial-gradient(50% 50% at 50% 50%,rgba(70,185,235,.28),rgba(70,185,235,0) 70%)}
+.kalt>*{position:relative;z-index:2}
+
+/* ---------- měřítka rozsahu ---------- */
+.kalt__scales{display:grid;gap:2.4rem}
+.kalt__scale{--c:#46B9EB}
+.kalt__scale--t{--c:#FF5C61}
+.kalt__lbl{display:flex;align-items:center;gap:1rem;margin:0 0 .4rem;font:700 1.4rem/2.1rem 'Satoshi';letter-spacing:.5px;text-transform:uppercase;color:#B4E2F6}
+.kalt__lbl img{flex:0 0 auto;width:2.6rem;height:2.6rem}
+.kalt__val{margin:0 0 1.2rem!important;font:700 3.4rem/4rem 'Satoshi';color:#FDFDFD;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kalt__val small{font-size:2rem;color:var(--c)}
+.kalt__track{position:relative;height:1.4rem;border-radius:.7rem;background:rgba(253,253,253,.12)}
+.kalt__track i{position:absolute;top:0;bottom:0;border-radius:0 .7rem 0 .7rem;background:var(--c);box-shadow:0 0 2.4rem color-mix(in srgb,var(--c) 55%,transparent)}
+.kalt__ticks{position:relative;height:2.2rem}
+.kalt__ticks span{position:absolute;top:0;transform:translateX(-50%);padding-top:.8rem;font:500 1.3rem/1.6rem 'Satoshi';color:rgba(253,253,253,.7);font-variant-numeric:tabular-nums;white-space:nowrap}
+.kalt__ticks span:before{content:"";position:absolute;left:50%;top:0;width:1px;height:.6rem;background:rgba(253,253,253,.45)}
+
+/* ---------- čárkovaná spojnice + údaj nejistoty ---------- */
+.kalt__chip{position:relative;display:inline-flex;align-items:baseline;gap:.8rem;margin:3.4rem 0 0!important;padding:1.2rem 2.2rem;border-radius:0 1.4rem 0 1.4rem;background:#FDFDFD;
+  font:500 1.5rem/2.2rem 'Satoshi'!important;color:#535353!important;box-shadow:0 .6rem 2.4rem rgba(15,22,32,.35)}
+.kalt__chip strong{font:700 2.4rem/2.6rem 'Satoshi';color:#331F5E;font-variant-numeric:tabular-nums}
+.kalt__chip:before{content:"";position:absolute;left:4rem;bottom:100%;width:2px;height:3rem;background:repeating-linear-gradient(to bottom,#46B9EB 0 6px,transparent 6px 12px)}
+.kalt__chip:after{content:"";position:absolute;left:3.5rem;bottom:calc(100% + 3rem);width:1.2rem;height:1.2rem;border-radius:50%;background:#46B9EB;box-shadow:0 0 1.6rem rgba(70,185,235,.9)}
+
+/* ---------- rámeček se značkami (stejný prvek jako „Vytvořeno pro regulované provozy“) ---------- */
+.kalt__cap{margin:2.6rem 0 1rem!important;font:500 1.5rem/2.2rem 'Satoshi'!important;color:#FDFDFD!important}
+.kalt__marks{display:inline-flex;align-items:center;gap:1.8rem;padding:1.2rem 1.8rem;border:1px solid rgba(70,185,235,.5);border-radius:0 2rem 0 2rem}
+.kalt__mark{display:flex;align-items:center;justify-content:center;height:5.2rem;padding:.6rem .9rem;box-sizing:border-box;background:#FDFDFD;border-radius:0 1rem 0 1rem}
+.kalt__mark img{display:block;width:auto;height:100%}
+.kalt__mark--wide{padding:1.2rem 1.4rem}
+.kalt__norm{font:500 1.3rem/1.9rem 'Satoshi';color:rgba(253,253,253,.75);white-space:nowrap}
+.kalt__norm b{display:block;font-weight:700;color:#FDFDFD}
+
+/* kompaktní varianty — zapínají se na užších obrazovkách */
+.kalt__u,.kalt__compact{display:none}
+
+/* ---------- responzivita (zlomy shodné s webem) ----------
+   Slide má na webu pevnou výšku pro všechny slidy, takže se kompozice po stupních zmenšuje:
+   plná měřítka jen na desktopu (dva sloupce), pod 1200 px kompaktní řádek s údaji,
+   pod 480 px zůstává rámeček se značkami. */
+@media (max-width:1690px){
+  .kalt__val{font-size:3.2rem;line-height:3.8rem}
+}
+@media (max-width:1199px){
+  section.slideshow .uk-slideshow>div .uk-slideshow-items li .slide.kalt-slide .uk-grid>div .text p{margin-bottom:1.6rem}
+  section.slideshow .uk-slideshow>div .uk-slideshow-items li .slide.kalt-slide .uk-grid>div .text p.buttons{margin-top:2.4rem}
+  .kalt{max-width:64rem;margin:2rem auto 0}
+  .kalt__scales,.kalt__chip,.kalt__u{display:none}
+  .kalt__compact{display:flex;flex-wrap:wrap;gap:1rem;margin:0!important}
+  .kalt__compact span{padding:.8rem 1.6rem;border:1px solid rgba(70,185,235,.5);border-radius:0 1rem 0 1rem;font:700 1.5rem/2.1rem 'Satoshi';color:#FDFDFD;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .kalt__compact span:first-child{border-color:rgba(255,92,97,.6)}
+  .kalt__cap{margin-top:2rem!important}
+  .kalt__mark{height:4.8rem}
+  .kalt__marks{padding:1.2rem 1.6rem}
+}
+@media (max-width:639px){
+  .kalt{margin-top:2rem}
+  .kalt__more{display:none}
+  .kalt__compact{gap:.8rem}
+  .kalt__compact span{padding:.7rem 1.4rem;font-size:1.4rem;line-height:2rem}
+  .kalt__cap{margin-top:2rem!important;font-size:1.4rem!important}
+  .kalt__marks{flex-wrap:wrap;gap:1.2rem 1.6rem;padding:1.2rem 1.4rem}
+  .kalt__mark{height:4.4rem}
+  .kalt__norm{font-size:1.2rem;line-height:1.7rem}
+}
+/* nejmenší telefony: slide má výšku jen 69rem, zůstává jen rámeček se značkami */
+@media (max-width:479px){
+  .kalt__compact,.kalt__cap{display:none}
+  /* nadpis o něco menší, aby se čtyřřádkový titulek vešel do pevné výšky slidu */
+  section.slideshow .uk-slideshow>div .uk-slideshow-items li .slide.kalt-slide .uk-grid>div .text h2{font-size:3.4rem;line-height:4.2rem}
+  .kalt{margin-top:1.4rem}
+  .kalt__mark{height:3.8rem}
+  .kalt__marks{gap:1rem 1.4rem;padding:1rem 1.2rem}
+}

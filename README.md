@@ -9,6 +9,8 @@ Hlavička, patička, písmo, tlačítka a formulářová sekce jsou **1:1 z prod
 | Soubor | Kam |
 |---|---|
 | `src/obsah.html` | obsah mezi hlavičku a patičku šablony stránky |
+| `src/hero-slide.html` | teaser kalibrace do hero carouselu na homepage — vložit jako další `<li>` do `<ul class="uk-slideshow-items">` v `section.slideshow`; náhled: [hero-slide.html](https://hutterlukas22-dot.github.io/datel-kalibrace/hero-slide.html) |
+| `assets/css/hero-slide.css` | styly teaseru (třídy `.kalt-`), přidat za hlavní CSS webu |
 | `src/head.html` | title, description, canonical, `noindex` a strukturovaná data (JSON-LD) do `<head>` |
 | `assets/css/kalibrace.css` | přidat za hlavní CSS webu — všechny třídy mají předponu `.kal-`, nic z webu nepřepisují |
 | `assets/css/datel-font-fix.css` | **globálně na celý web** — 14 prvků (claim v hlavičce a patičce, nadpisy menu v patičce, vyhledávání) web dnes sází písmem Inter; soubor je převádí na firemní Satoshi. Obsahuje i úpravu loga: v hlavičce, patičce i v okně vyhledávání je kompletní originální SVG s claimem podle manuálu (`assets/img/logo/`) místo PNG s claimem v HTML textu |
