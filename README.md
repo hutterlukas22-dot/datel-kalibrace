@@ -29,6 +29,9 @@ Hlavička, patička, písmo, tlačítka a formulářová sekce jsou **1:1 z prod
 - Brand: štítek s linkou, nadpisy H2 fialová + modrá, rohy `0 2rem 0 2rem`, pattern na fialové 50 %.
 - Značky ČIA (K 2432) a Global ACI jsou v `assets/img/znacky/`, loga výrobců v `assets/img/vyrobci/`
   (ořezaná, zmenšená). Loga výrobců jsou monochromatická, barva se ukáže při najetí myší.
+- Teaser v hero carouselu (`src/hero-slide.html`) staví na stejné fotce z laboratoře jako úvod stránky.
+  Okraje fotky jdou do ztracena CSS maskou (stejný princip jako fotka v `section.pageTop`), přes spodní
+  hranu přesahuje štítek s akreditačními značkami ČIA a Global ACI.
 - Osa „Rozsah akreditace v kostce“: teplota červeně, vlhkost modře (modifikátory `.kal-axis--t` / `.kal-axis--rh`).
 - Kontakt u formuláře: původní portrét z webu, pod ním linka; na desktopu jede s formulářem (sticky).
   Sekce má `overflow:clip` místo webového `overflow:hidden`, jinak sticky nefunguje.
